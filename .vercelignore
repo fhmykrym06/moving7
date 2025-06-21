@@ -1,0 +1,20 @@
+node_modules/
+.git/
+.vscode/
+.idea/
+*.log
+.env*
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+package-lock.json
+yarn.lock
+.cache/
+
+# Documentation files that aren't needed for deployment
+*.md
+!README.md
+
+# Development only files
+vercel-simple.json 

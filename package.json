@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "npx live-server . --port=3000 --entry-file=index.html",
     "start": "npx live-server . --port=3000 --entry-file=index.html",
-    "build": "cp -r *.html public/ 2>/dev/null || xcopy *.html public\\ /Y /Q 2>nul || echo 'Files ready for deployment'",
+    "build": "echo 'Static site - build complete'",
     "test": "echo 'No tests specified' && exit 0",
     "lint": "echo 'HTML/CSS/JS validation'",
     "deploy": "vercel --prod",
