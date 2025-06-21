@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نصائح نقل الأجهزة الكهربائية الكبيرة | دليل شامل</title>
+    <meta name="description" content="دليل متخصص لنقل الثلاجات والغسالات والمكيفات والأجهزة الكهربائية الكبيرة بأمان تام مع نصائح الخبراء.">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #1A237E;
+            --secondary-blue: #42A5F5;
+            --gold: #FFD700;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+            --success-green: #4CAF50;
+            --warning-red: #F44336;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        /* Article Styles */
+        .article-header {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark-gray);
+            opacity: 0.8;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .content h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 700;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .content h3 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content ul, .content ol {
+            margin: 1.5rem 0;
+            padding-right: 2rem;
+        }
+
+        .content li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .device-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .device-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, var(--warning-red), #FF7043);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .warning-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .checklist-box {
+            background: linear-gradient(135deg, var(--success-green), #66BB6A);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .checklist-box h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-blog {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+            transition: background 0.3s;
+        }
+
+        .back-to-blog:hover {
+            background: var(--secondary-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-content {
+                padding: 2rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <i class="fas fa-star"></i> نقل العفش جدة
+            </a>
+            <nav>
+                <a href="../../index.html" class="nav-link">الرئيسية</a>
+                <a href="../../companies.html" class="nav-link">الشركات</a>
+                <a href="../index.html" class="nav-link">المدونة</a>
+                <a href="../../contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <h1 class="article-title">نصائح نقل الأجهزة الكهربائية الكبيرة</h1>
+            <div class="article-meta">
+                <div class="meta-item">
+                    <img src="../../public/images/author/ahmed_mohammed_alsaudi.png" alt="أحمد محمد السعودي" class="author-avatar">
+                    <span>أحمد محمد السعودي</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>12 نوفمبر 2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>10 دقائق للقراءة</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-eye"></i>
+                    <span>1,523 مشاهدة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <a href="../index.html" class="back-to-blog">
+            <i class="fas fa-arrow-right"></i> العودة للمدونة
+        </a>
+
+        <article class="article-content">
+            <div class="warning-box">
+                <h3><i class="fas fa-exclamation-triangle"></i> تحذير هام</h3>
+                <p>
+                    نقل الأجهزة الكهربائية الكبيرة يتطلب احتياطات خاصة لضمان سلامة الجهاز والأشخاص. 
+                    اتباع هذه النصائح أمر ضروري لتجنب الأضرار والحوادث.
+                </p>
+            </div>
+
+            <p>
+                الأجهزة الكهربائية الكبيرة مثل الثلاجات والغسالات والمكيفات تحتاج إلى عناية خاصة أثناء النقل. 
+                هذا الدليل الشامل يقدم لك جميع النصائح والخطوات اللازمة لنقل آمن وناجح لأجهزتك الكهربائية.
+            </p>
+
+            <h2>التحضيرات قبل النقل</h2>
+
+            <h3>التخطيط المسبق</h3>
+            <ul>
+                <li><strong>قياس الأبعاد:</strong> تأكد من أن الجهاز يمر عبر الأبواب والممرات</li>
+                <li><strong>إعداد المسار:</strong> نظف الطريق من العوائق</li>
+                <li><strong>توفير المعدات:</strong> أحضر عربة نقل ومعدات الحماية</li>
+                <li><strong>فريق العمل:</strong> احصل على مساعدة كافية (2-4 أشخاص)</li>
+            </ul>
+
+            <h3>الاستعدادات العامة</h3>
+            <ul>
+                <li>فصل الجهاز عن الكهرباء قبل 24 ساعة من النقل</li>
+                <li>إفراغ الجهاز من المحتويات والمياه</li>
+                <li>تنظيف الجهاز من الداخل والخارج</li>
+                <li>إزالة الأجزاء القابلة للفك (أرفف، أدراج)</li>
+                <li>الاحتفاظ بجميع البراغي والقطع الصغيرة في كيس منفصل</li>
+            </ul>
+
+            <h2>نقل الأجهزة حسب النوع</h2>
+
+            <div class="device-card">
+                <h3><i class="fas fa-snowflake"></i> الثلاجات والفريزرات</h3>
+                
+                <h4>قبل النقل:</h4>
+                <ul>
+                    <li>فصل الثلاجة قبل 24-48 ساعة للذوبان الكامل</li>
+                    <li>تنظيف الداخل وتجفيفه تماماً</li>
+                    <li>إزالة جميع الأرفف والأدراج وتغليفها منفصلة</li>
+                    <li>تثبيت الباب بشريط لاصق قوي</li>
+                </ul>
+
+                <h4>أثناء النقل:</h4>
+                <ul>
+                    <li><strong>موضع عمودي فقط:</strong> لا تميل الثلاجة أكثر من 45 درجة</li>
+                    <li>استخدم عربة نقل مخصصة للأجهزة الثقيلة</li>
+                    <li>احم الزوايا بمواد التغليف</li>
+                    <li>تجنب الهز أو الاهتزاز الشديد</li>
+                </ul>
+
+                <h4>بعد النقل:</h4>
+                <ul>
+                    <li>اتركها في وضع عمودي لمدة 4-6 ساعات قبل التشغيل</li>
+                    <li>نظف المكان وتأكد من التهوية الجيدة</li>
+                    <li>أعد تركيب الأرفف والأدراج</li>
+                </ul>
+            </div>
+
+            <div class="device-card">
+                <h3><i class="fas fa-tshirt"></i> الغسالات والنشافات</h3>
+                
+                <h4>تحضيرات خاصة:</h4>
+                <ul>
+                    <li>شغل دورة تنظيف لإزالة بقايا الصابون</li>
+                    <li>فصل خراطيم المياه واتركها تجف</li>
+                    <li>تثبيت الطبلة الداخلية ببراغي النقل الأصلية</li>
+                    <li>إفراغ جميع جيوب الملابس</li>
+                </ul>
+
+                <h4>احتياطات النقل:</h4>
+                <ul>
+                    <li>استخدم براغي التثبيت الأصلية للطبلة</li>
+                    <li>احرص على عدم إمالة الغسالة أكثر من اللازم</li>
+                    <li>استخدم أحزمة التثبيت في الشاحنة</li>
+                    <li>تجنب النقل في الطقس الماطر</li>
+                </ul>
+            </div>
+
+            <div class="device-card">
+                <h3><i class="fas fa-wind"></i> أجهزة التكييف</h3>
+                
+                <h4>الوحدات المنفصلة:</h4>
+                <ul>
+                    <li>استعن بفني مختص لفك الوحدة الخارجية</li>
+                    <li>احتفظ بغاز التبريد ولا تفرغه</li>
+                    <li>غلف الأنابيب بعناية فائقة</li>
+                    <li>انقل الوحدات في وضع عمودي</li>
+                </ul>
+
+                <h4>الوحدات الشباكية:</h4>
+                <ul>
+                    <li>استعن بشخصين على الأقل للنقل</li>
+                    <li>احم الزعانف المعدنية من التلف</li>
+                    <li>تأكد من عدم تسرب المياه الداخلية</li>
+                </ul>
+            </div>
+
+            <div class="device-card">
+                <h3><i class="fas fa-utensils"></i> أجهزة المطبخ الكبيرة</h3>
+                
+                <h4>الفرن والموقد:</h4>
+                <ul>
+                    <li>فصل خط الغاز بواسطة فني مختص</li>
+                    <li>إزالة الأرفف والصواني الداخلية</li>
+                    <li>تنظيف الفرن من بقايا الطعام والدهون</li>
+                    <li>تثبيت الباب بشريط لاصق</li>
+                </ul>
+
+                <h4>غسالة الأطباق:</h4>
+                <ul>
+                    <li>فصل خراطيم المياه والصرف</li>
+                    <li>إزالة الأرفف وسلال الأطباق</li>
+                    <li>تجفيف الداخل تماماً من المياه</li>
+                    <li>تثبيت الباب من الحركة</li>
+                </ul>
+            </div>
+
+            <h2>معدات وأدوات النقل</h2>
+
+            <h3>المعدات الأساسية</h3>
+            <ul>
+                <li><strong>عربة نقل:</strong> مخصصة للأجهزة الثقيلة مع أحزمة</li>
+                <li><strong>أحزمة التثبيت:</strong> لتثبيت الجهاز في الشاحنة</li>
+                <li><strong>مواد التغليف:</strong> بطانيات، فقاعات هوائية، كرتون</li>
+                <li><strong>قفازات عمل:</strong> لحماية اليدين وتحسين القبضة</li>
+                <li><strong>واقيات الأرضية:</strong> لحماية الأرضية من الخدوش</li>
+            </ul>
+
+            <h3>أدوات متخصصة</h3>
+            <ul>
+                <li>عجلات متحركة للأجهزة الثقيلة</li>
+                <li>رافعة يدوية لرفع الأجهزة</li>
+                <li>واقيات الزوايا والحواف</li>
+                <li>أشرطة لاصقة قوية ومقاومة</li>
+            </ul>
+
+            <h2>تقنيات النقل الآمن</h2>
+
+            <h3>تقنيات الرفع الصحيحة</h3>
+            <ul>
+                <li><strong>استخدم ساقيك وليس ظهرك:</strong> اثن الركبتين وحافظ على استقامة الظهر</li>
+                <li><strong>اقترب من الجهاز:</strong> لا تمد ذراعيك بعيداً عن الجسم</li>
+                <li><strong>ارفع تدريجياً:</strong> لا تحاول الرفع بسرعة أو بحركة مفاجئة</li>
+                <li><strong>استخدم القوة الجماعية:</strong> وزع الحمل على عدة أشخاص</li>
+            </ul>
+
+            <h3>الحركة والمناورة</h3>
+            <ul>
+                <li>حرك الجهاز ببطء وثبات</li>
+                <li>تجنب الدوران المفاجئ أو التوقف السريع</li>
+                <li>استخدم العربة في الممرات الطويلة</li>
+                <li>تأكد من وجود شخص يوجه الحركة</li>
+            </ul>
+
+            <div class="checklist-box">
+                <h3><i class="fas fa-clipboard-check"></i> قائمة فحص ما قبل النقل</h3>
+                <ul>
+                    <li>✓ فصل الجهاز من الكهرباء والمياه</li>
+                    <li>✓ إفراغ الجهاز من المحتويات</li>
+                    <li>✓ تنظيف وتجفيف الجهاز</li>
+                    <li>✓ إزالة الأجزاء القابلة للفك</li>
+                    <li>✓ تحضير مواد التغليف والحماية</li>
+                    <li>✓ تجهيز فريق النقل والمعدات</li>
+                    <li>✓ التأكد من صلاحية المسار</li>
+                    <li>✓ وضع خطة للطوارئ</li>
+                </ul>
+            </div>
+
+            <h2>نصائح السلامة المهمة</h2>
+
+            <h3>السلامة الشخصية</h3>
+            <ul>
+                <li>ارتد ملابس مناسبة وأحذية مقاومة للانزلاق</li>
+                <li>استخدم قفازات عمل وواقي للظهر إذا كان متاحاً</li>
+                <li>خذ فترات راحة منتظمة لتجنب الإرهاق</li>
+                <li>لا تحاول رفع أوزان تفوق قدرتك</li>
+            </ul>
+
+            <h3>السلامة الكهربائية</h3>
+            <ul>
+                <li>تأكد من فصل الكهرباء تماماً قبل اللمس</li>
+                <li>جفف يديك قبل التعامل مع الأجهزة</li>
+                <li>احذر من الأسلاك المكشوفة أو التالفة</li>
+                <li>لا تسحب الجهاز من السلك الكهربائي</li>
+            </ul>
+
+            <h2>أخطاء شائعة يجب تجنبها</h2>
+
+            <ul>
+                <li><strong>نقل الثلاجة على جنبها:</strong> قد يضر بنظام التبريد</li>
+                <li><strong>عدم تثبيت طبلة الغسالة:</strong> يسبب أضراراً داخلية</li>
+                <li><strong>نقل الأجهزة وهي مبللة:</strong> خطر كهربائي وتلف</li>
+                <li><strong>الإهمال في التغليف:</strong> خدوش وكسور</li>
+                <li><strong>التشغيل الفوري:</strong> بعد النقل مباشرة</li>
+                <li><strong>عدم التحقق من الضمان:</strong> قبل النقل الذاتي</li>
+            </ul>
+
+            <div class="warning-box">
+                <h3><i class="fas fa-tools"></i> متى تستعين بالمختصين</h3>
+                <p>
+                    لا تتردد في الاستعانة بفنيين مختصين في الحالات التالية:
+                </p>
+                <ul>
+                    <li>فك وتركيب أجهزة التكييف المنفصلة</li>
+                    <li>التعامل مع خطوط الغاز</li>
+                    <li>نقل الأجهزة الثمينة جداً أو الضخمة</li>
+                    <li>عدم توفر المعدات أو الخبرة اللازمة</li>
+                </ul>
+            </div>
+
+            <h2>التركيب في المكان الجديد</h2>
+
+            <h3>اختيار المكان المناسب</h3>
+            <ul>
+                <li>تأكد من التهوية الجيدة حول الجهاز</li>
+                <li>اترك مسافة كافية من الجدران (5-10 سم)</li>
+                <li>تأكد من استقرار الأرضية وقدرتها على التحمل</li>
+                <li>تجنب المناطق المعرضة لأشعة الشمس المباشرة</li>
+            </ul>
+
+            <h3>التوصيلات النهائية</h3>
+            <ul>
+                <li>تحقق من مطابقة الجهد الكهربائي</li>
+                <li>استخدم مقابس مؤرضة وآمنة</li>
+                <li>اتبع تعليمات الشركة المصنعة للتشغيل الأول</li>
+                <li>اختبر جميع الوظائف قبل الاستخدام العادي</li>
+            </ul>
+
+            <h2>الخلاصة</h2>
+            <p>
+                نقل الأجهزة الكهربائية الكبيرة يتطلب تخطيطاً دقيقاً وتنفيذاً حذراً. باتباع هذه النصائح 
+                والاحتياطات، ستتمكن من نقل أجهزتك بأمان وضمان عملها بكفاءة في المكان الجديد.
+            </p>
+
+            <p>
+                تذكر أن الاستعانة بالمختصين في بعض الحالات أفضل من المخاطرة بسلامتك أو تلف الجهاز. 
+                الاستثمار في نقل احترافي يوفر عليك تكاليف الإصلاح والاستبدال على المدى الطويل.
+            </p>
+        </article>
+    </main>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Professional Footer -->
+    <footer style="background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)); color: white; padding: 4rem 0 2rem 0; margin-top: 5rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                
+                <!-- About Section -->
+                <div>
+                    <h3 style="color: var(--gold); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-star"></i>
+                        نقل العفش جدة
+                    </h3>
+                    <p style="line-height: 1.8; margin-bottom: 1.5rem; opacity: 0.9;">
+                        منصة متخصصة في توفير أفضل خدمات نقل العفش في جدة. نربط العملاء بشركات النقل الموثوقة ونقدم المشورة المتخصصة لضمان تجربة نقل آمنة ومريحة.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-link"></i>
+                        روابط سريعة
+                    </h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="../../index.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-home"></i> الرئيسية
+                        </a></li>
+                        <li><a href="../../companies.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-building"></i> دليل الشركات
+                        </a></li>
+                        <li><a href="../../compare.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-balance-scale"></i> مقارنة الشركات
+                        </a></li>
+                        <li><a href="../../reviews.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-star"></i> المراجعات والتقييمات
+                        </a></li>
+                        <li><a href="../index.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-blog"></i> المدونة والنصائح
+                        </a></li>
+                        <li><a href="../../contact.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-phone"></i> اتصل بنا
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-tools"></i>
+                        خدماتنا
+                    </h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-truck"></i> نقل الأثاث المنزلي
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-building"></i> نقل المكاتب والشركات
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-box"></i> خدمات التغليف والتعبئة
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-warehouse"></i> التخزين المؤقت
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-shield-alt"></i> التأمين على الممتلكات
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-headset"></i> استشارات نقل مجانية
+                        </span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-map-marker-alt"></i>
+                        معلومات التواصل
+                    </h4>
+                    <div style="line-height: 2.2;">
+                        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-phone" style="color: var(--gold);"></i>
+                            <div>
+                                <strong style="display: block;">خط الخدمة الرئيسي</strong>
+                                <a href="tel:+966501234567" style="color: white; text-decoration: none; opacity: 0.9;">+966 50 123 4567</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-envelope" style="color: var(--gold);"></i>
+                            <div>
+                                <strong style="display: block;">البريد الإلكتروني</strong>
+                                <a href="mailto:info@jeddahmoving.com" style="color: white; text-decoration: none; opacity: 0.9;">info@jeddahmoving.com</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--gold); margin-top: 0.2rem;"></i>
+                            <div>
+                                <strong style="display: block;">العنوان</strong>
+                                <span style="opacity: 0.9;">شارع الملك عبدالعزيز، جدة<br>المملكة العربية السعودية</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.8rem;">
+                            <i class="fas fa-clock" style="color: var(--gold);"></i>
+                            <div>
+                                <strong style="display: block;">ساعات العمل</strong>
+                                <span style="opacity: 0.9;">24/7 - خدمة على مدار الساعة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="opacity: 0.9;">
+                    <p>&copy; 2024 نقل العفش جدة. جميع الحقوق محفوظة.</p>
+                </div>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <a href="../../terms.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                        شروط الاستخدام
+                    </a>
+                    <a href="../../privacy.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                        سياسة الخصوصية
+                    </a>
+                    <a href="../../contact.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                        اتصل بنا
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Action Button -->
+        <div style="position: fixed; bottom: 30px; left: 30px; z-index: 1000;">
+            <a href="tel:+966501234567" style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: var(--gold); color: var(--primary-blue); border-radius: 50%; text-decoration: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); transition: all 0.3s; font-size: 1.5rem;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html> 

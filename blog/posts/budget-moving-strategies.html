@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استراتيجيات النقل الاقتصادي | وفر حتى 50% من تكاليف النقل</title>
+    <meta name="description" content="استراتيجيات ذكية للنقل الاقتصادي وتوفير التكاليف مع الحفاظ على جودة الخدمة. نصائح عملية لتقليل تكلفة نقل العفش.">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #1A237E;
+            --secondary-blue: #42A5F5;
+            --gold: #FFD700;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+            --success-green: #4CAF50;
+            --warning-red: #F44336;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 1rem;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        /* Article Styles */
+        .article-header {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--dark-gray);
+            opacity: 0.8;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .content h2 {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            font-weight: 700;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 0.5rem;
+        }
+
+        .content h3 {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .content ul, .content ol {
+            margin: 1.5rem 0;
+            padding-right: 2rem;
+        }
+
+        .content li {
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .savings-card {
+            background: linear-gradient(135deg, var(--success-green), #66BB6A);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .savings-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .savings-label {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .strategy-card {
+            background: var(--light-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .strategy-card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .cost-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .expensive-method {
+            background: linear-gradient(135deg, var(--warning-red), #FF7043);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .budget-method {
+            background: linear-gradient(135deg, var(--success-green), #66BB6A);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+        }
+
+        .expensive-method h3,
+        .budget-method h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--gold), #FFA726);
+            color: var(--dark-gray);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .savings-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .savings-table th,
+        .savings-table td {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .savings-table th {
+            background: var(--primary-blue);
+            color: white;
+            font-weight: 600;
+        }
+
+        .savings-table tr:hover {
+            background: var(--light-gray);
+        }
+
+        .back-to-blog {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+            transition: background 0.3s;
+        }
+
+        .back-to-blog:hover {
+            background: var(--secondary-blue);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 2rem;
+            }
+            
+            .article-content {
+                padding: 2rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .cost-comparison {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="../../index.html" class="logo">
+                <i class="fas fa-star"></i> نقل العفش جدة
+            </a>
+            <nav>
+                <a href="../../index.html" class="nav-link">الرئيسية</a>
+                <a href="../../companies.html" class="nav-link">الشركات</a>
+                <a href="../index.html" class="nav-link">المدونة</a>
+                <a href="../../contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Article Header -->
+    <section class="article-header">
+        <div class="container">
+            <h1 class="article-title">استراتيجيات النقل الاقتصادي</h1>
+            <div class="article-meta">
+                <div class="meta-item">
+                    <img src="../../public/images/author/ali_ahmed_alghamdi.png" alt="علي أحمد الغامدي" class="author-avatar">
+                    <span>علي أحمد الغامدي</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>16 نوفمبر 2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>12 دقيقة للقراءة</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-eye"></i>
+                    <span>2,456 مشاهدة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <a href="../index.html" class="back-to-blog">
+            <i class="fas fa-arrow-right"></i> العودة للمدونة
+        </a>
+
+        <article class="article-content">
+            <div class="savings-card">
+                <span class="savings-number">50%</span>
+                <span class="savings-label">يمكن توفيرها باستخدام الاستراتيجيات الذكية</span>
+            </div>
+
+            <p>
+                نقل العفش لا يجب أن يكون مكلفاً دائماً. مع الاستراتيجيات الصحيحة والتخطيط الذكي، 
+                يمكنك توفير مبالغ كبيرة دون التضحية بجودة الخدمة أو سلامة أثاثك. 
+                هذا الدليل يقدم استراتيجيات مثبتة للنقل الاقتصادي.
+            </p>
+
+            <h2>فلسفة النقل الاقتصادي</h2>
+
+            <p>
+                النقل الاقتصادي لا يعني بالضرورة الحصول على أرخص خدمة، بل الحصول على أفضل قيمة مقابل المال. 
+                الهدف هو تحقيق التوازن المثالي بين التكلفة والجودة والراحة.
+            </p>
+
+            <h3>المبادئ الأساسية</h3>
+            <ul>
+                <li><strong>التخطيط المسبق:</strong> كلما خططت مبكراً، زادت خياراتك لتوفير المال</li>
+                <li><strong>المرونة في التوقيت:</strong> تجنب المواسم الذروة</li>
+                <li><strong>المقارنة الذكية:</strong> لا تقارن الأسعار فقط بل القيمة الإجمالية</li>
+                <li><strong>التفاوض الفعال:</strong> كل شيء قابل للتفاوض في عالم النقل</li>
+                <li><strong>الاستعداد للمشاركة:</strong> بعض المهام يمكنك القيام بها بنفسك</li>
+            </ul>
+
+            <h2>استراتيجيات توفير التكاليف</h2>
+
+            <div class="strategy-card">
+                <h3><i class="fas fa-calendar-alt"></i> استراتيجية التوقيت الذكي</h3>
+                
+                <h4>أفضل الأوقات للنقل:</h4>
+                <ul>
+                    <li><strong>منتصف الشهر:</strong> تجنب بداية ونهاية الشهر</li>
+                    <li><strong>منتصف الأسبوع:</strong> الثلاثاء والأربعاء أرخص</li>
+                    <li><strong>خارج المواسم:</strong> تجنب الصيف وبداية العام الدراسي</li>
+                    <li><strong>الصباح الباكر:</strong> أول مواعيد اليوم غالباً أرخص</li>
+                </ul>
+
+                <h4>المواسم الذهبية للتوفير:</h4>
+                <ul>
+                    <li>شهر فبراير ومارس</li>
+                    <li>شهر أكتوبر ونوفمبر</li>
+                    <li>منتصف يناير</li>
+                    <li>الفترة بين العيدين</li>
+                </ul>
+            </div>
+
+            <div class="strategy-card">
+                <h3><i class="fas fa-boxes"></i> استراتيجية تقليل الحجم</h3>
+                
+                <h4>قبل النقل:</h4>
+                <ul>
+                    <li><strong>تصفية الأثاث:</strong> بع أو تبرع بالأشياء غير المحتاجة</li>
+                    <li><strong>تفكيك ما يمكن تفكيكه:</strong> وفر مساحة وتكلفة</li>
+                    <li><strong>استهلك المواد القابلة للتلف:</strong> أطعمة، منظفات</li>
+                    <li><strong>اعطِ الأثاث الثقيل لأفراد العائلة:</strong> وأعد شراؤه في المكان الجديد</li>
+                </ul>
+
+                <h4>نصائح التغليف الذكي:</h4>
+                <ul>
+                    <li>استخدم ملابسك لتغليف الأشياء الهشة</li>
+                    <li>املأ الصناديق بالكامل لتوفير المساحة</li>
+                    <li>استخدم حقائب السفر للكتب والأشياء الثقيلة</li>
+                    <li>فكك الأثاث المودولار بنفسك</li>
+                </ul>
+            </div>
+
+            <div class="strategy-card">
+                <h3><i class="fas fa-handshake"></i> استراتيجية النقل المشترك</h3>
+                
+                <h4>طرق النقل المشترك:</h4>
+                <ul>
+                    <li><strong>النقل المجمع:</strong> شارك الشاحنة مع عملاء آخرين</li>
+                    <li><strong>النقل العكسي:</strong> احجز شاحنة عائدة فارغة</li>
+                    <li><strong>النقل الجماعي:</strong> تنسق مع جيران ينقلون نفس الاتجاه</li>
+                    <li><strong>النقل المرحلي:</strong> استخدم التخزين المؤقت لتقسيم الرحلة</li>
+                </ul>
+
+                <h4>مزايا النقل المشترك:</h4>
+                <ul>
+                    <li>توفير 30-50% من التكلفة</li>
+                    <li>تقليل البصمة البيئية</li>
+                    <li>إمكانية حجز شركات أكبر بتكلفة أقل</li>
+                    <li>خدمة أفضل أحياناً بسبب التنوع</li>
+                </ul>
+            </div>
+
+            <h2>مقارنة التكاليف: التقليدي مقابل الاقتصادي</h2>
+
+            <table class="savings-table">
+                <thead>
+                    <tr>
+                        <th>الخدمة</th>
+                        <th>الطريقة التقليدية</th>
+                        <th>الطريقة الاقتصادية</th>
+                        <th>نسبة التوفير</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>نقل شقة غرفتين</td>
+                        <td>1,800 ريال</td>
+                        <td>1,200 ريال</td>
+                        <td>33%</td>
+                    </tr>
+                    <tr>
+                        <td>التغليف</td>
+                        <td>500 ريال</td>
+                        <td>150 ريال (ذاتي)</td>
+                        <td>70%</td>
+                    </tr>
+                    <tr>
+                        <td>التخزين الشهري</td>
+                        <td>400 ريال</td>
+                        <td>200 ريال (مشترك)</td>
+                        <td>50%</td>
+                    </tr>
+                    <tr>
+                        <td>النقل بين المدن</td>
+                        <td>3,500 ريال</td>
+                        <td>2,100 ريال (مجمع)</td>
+                        <td>40%</td>
+                    </tr>
+                    <tr>
+                        <td>التأمين</td>
+                        <td>300 ريال</td>
+                        <td>150 ريال (تفاوض)</td>
+                        <td>50%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>النقل بنفسك مقابل الاستعانة بالمختصين</h2>
+
+            <div class="cost-comparison">
+                <div class="expensive-method">
+                    <h3>النقل الكامل بالشركة</h3>
+                    <p><strong>التكلفة:</strong> 100% من السعر</p>
+                    <p><strong>المزايا:</strong></p>
+                    <ul>
+                        <li>راحة كاملة</li>
+                        <li>ضمان وتأمين</li>
+                        <li>سرعة في التنفيذ</li>
+                        <li>خبرة احترافية</li>
+                    </ul>
+                    <p><strong>العيوب:</strong></p>
+                    <ul>
+                        <li>التكلفة العالية</li>
+                        <li>مرونة أقل</li>
+                        <li>قيود في التوقيت</li>
+                    </ul>
+                </div>
+
+                <div class="budget-method">
+                    <h3>النقل المختلط (هجين)</h3>
+                    <p><strong>التكلفة:</strong> 60-70% من السعر</p>
+                    <p><strong>المزايا:</strong></p>
+                    <ul>
+                        <li>توفير كبير</li>
+                        <li>مرونة أكثر</li>
+                        <li>تحكم شخصي</li>
+                        <li>تجربة تعليمية</li>
+                    </ul>
+                    <p><strong>العيوب:</strong></p>
+                    <ul>
+                        <li>جهد إضافي</li>
+                        <li>وقت أطول</li>
+                        <li>مسؤولية أكبر</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>ما يمكنك القيام به بنفسك</h2>
+
+            <h3>مهام سهلة التنفيذ</h3>
+            <ul>
+                <li><strong>التغليف:</strong> 80% من الأشياء يمكن تغليفها ذاتياً</li>
+                <li><strong>التفكيك:</strong> الأثاث البسيط والطاولات</li>
+                <li><strong>النقل الشخصي:</strong> الوثائق والأشياء الثمينة</li>
+                <li><strong>التنظيف:</strong> قبل وبعد النقل</li>
+                <li><strong>التنظيم:</strong> ترتيب الأثاث في المكان الجديد</li>
+            </ul>
+
+            <h3>مهام تحتاج للمختصين</h3>
+            <ul>
+                <li>نقل الأثاث الثقيل (أكثر من 50 كيلو)</li>
+                <li>تفكيك وتركيب الأجهزة الكهربائية</li>
+                <li>نقل القطع الهشة والثمينة</li>
+                <li>تركيب الأثاث المعقد</li>
+                <li>النقل عبر الطوابق العالية</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h3><i class="fas fa-lightbulb"></i> نصيحة ذهبية</h3>
+                <p>
+                    <strong>القاعدة 80/20:</strong> اعمل 80% من المهام بنفسك (التغليف، التنظيم، النقل الشخصي) 
+                    واستعن بالمختصين في 20% من المهام الصعبة (الأثاث الثقيل، الأجهزة). 
+                    هذا يوفر حتى 50% من التكلفة الإجمالية.
+                </p>
+            </div>
+
+            <h2>تقنيات التفاوض الذكي</h2>
+
+            <h3>نقاط القوة في التفاوض</h3>
+            <ul>
+                <li><strong>المرونة في التوقيت:</strong> "يمكنني النقل في أي يوم من الأسبوع"</li>
+                <li><strong>الدفع النقدي:</strong> تجنب رسوم البطاقات</li>
+                <li><strong>التوصية:</strong> "سأنصح أصدقائي إذا كانت الخدمة ممتازة"</li>
+                <li><strong>الولاء:</strong> "أخطط للنقل مرة أخرى العام القادم"</li>
+                <li><strong>التحضير الذاتي:</strong> "سأقوم بالتغليف والتحضير بنفسي"</li>
+            </ul>
+
+            <h3>استراتيجيات التفاوض</h3>
+            <ol>
+                <li><strong>ابدأ بعرض أقل بـ20%:</strong> من السعر المستهدف</li>
+                <li><strong>اطلب خدمات إضافية مجانية:</strong> بدلاً من تخفيض السعر</li>
+                <li><strong>فاوض على الحزمة الكاملة:</strong> وليس كل خدمة منفصلة</li>
+                <li><strong>استخدم التوقيت:</strong> فاوض في نهاية الشهر أو اليوم</li>
+                <li><strong>كن مستعداً للمغادرة:</strong> أقوى ورقة تفاوضية</li>
+            </ol>
+
+            <h2>بدائل مبتكرة للنقل التقليدي</h2>
+
+            <h3>تطبيقات النقل التشاركي</h3>
+            <ul>
+                <li><strong>منصات النقل الرقمية:</strong> تطبيقات تربط العملاء بالسائقين</li>
+                <li><strong>مجموعات التواصل الاجتماعي:</strong> للبحث عن نقل مشترك</li>
+                <li><strong>لوحات إعلانات الأحياء:</strong> للتنسيق مع الجيران</li>
+                <li><strong>مواقع الإعلانات المبوبة:</strong> للبحث عن خدمات اقتصادية</li>
+            </ul>
+
+            <h3>النقل المرحلي</h3>
+            <ul>
+                <li><strong>المرحلة الأولى:</strong> نقل الأساسيات أولاً</li>
+                <li><strong>التخزين المؤقت:</strong> استخدام مخازن رخيصة</li>
+                <li><strong>المرحلة الثانية:</strong> نقل الباقي في وقت لاحق</li>
+                <li><strong>الاستفادة من الرحلات:</strong> نقل أشياء في السيارة الشخصية</li>
+            </ul>
+
+            <h2>خطة عمل للنقل الاقتصادي</h2>
+
+            <h3>8 أسابيع قبل النقل</h3>
+            <ul>
+                <li>ابدأ تصفية الأثاث غير المرغوب</li>
+                <li>ابحث عن عروض الشركات</li>
+                <li>احجز التواريخ المرنة</li>
+                <li>ابدأ جمع مواد التغليف مجاناً</li>
+            </ul>
+
+            <h3>4 أسابيع قبل النقل</h3>
+            <ul>
+                <li>انهِ المقارنات واحجز الشركة</li>
+                <li>فاوض على أفضل سعر</li>
+                <li>ابدأ التغليف التدريجي</li>
+                <li>نظم مجموعة متطوعين للمساعدة</li>
+            </ul>
+
+            <h3>أسبوع قبل النقل</h3>
+            <ul>
+                <li>أكمل التغليف</li>
+                <li>أكد جميع الترتيبات</li>
+                <li>حضر الوجبات والمشروبات للفريق</li>
+                <li>تأكد من جاهزية المكان الجديد</li>
+            </ul>
+
+            <h3>يوم النقل</h3>
+            <ul>
+                <li>كن حاضراً للإشراف</li>
+                <li>وثق أي مشاكل فوراً</li>
+                <li>تأكد من اكتمال النقل</li>
+                <li>قيم الخدمة واكتب مراجعة</li>
+            </ul>
+
+            <div class="strategy-card">
+                <h3><i class="fas fa-piggy-bank"></i> حاسبة التوفير السريعة</h3>
+                
+                <h4>لتقدير مقدار ما يمكنك توفيره:</h4>
+                <ul>
+                    <li><strong>النقل المرن (وقت):</strong> وفر 15-25%</li>
+                    <li><strong>التغليف الذاتي:</strong> وفر 300-800 ريال</li>
+                    <li><strong>النقل المشترك:</strong> وفر 30-50%</li>
+                    <li><strong>التفاوض الذكي:</strong> وفر 10-20%</li>
+                    <li><strong>التحضير الذاتي:</strong> وفر 200-500 ريال</li>
+                </ul>
+
+                <p><strong>المثال:</strong> نقل شقة 3 غرف تكلف عادة 2,500 ريال يمكن أن تكلف 1,400 ريال فقط!</p>
+            </div>
+
+            <h2>أخطاء التوفير الشائعة</h2>
+
+            <h3>أخطاء يجب تجنبها</h3>
+            <ul>
+                <li><strong>التضحية بالجودة كلياً:</strong> اختر أرخص خدمة دون تقييم</li>
+                <li><strong>عدم قراءة العقد:</strong> رسوم خفية قد تلغي التوفير</li>
+                <li><strong>التأخير في الحجز:</strong> خيارات أقل وأسعار أعلى</li>
+                <li><strong>عدم التأمين:</strong> توفير مؤقت قد يكلف أكثر</li>
+                <li><strong>الثقة الزائدة:</strong> محاولة نقل أشياء ثقيلة بمفردك</li>
+            </ul>
+
+            <h3>متى لا تحاول التوفير</h3>
+            <ul>
+                <li>عندما تكون الأثاث ثميناً جداً</li>
+                <li>في حالات النقل الطارئة</li>
+                <li>عند نقل أثاث تاريخي أو فني</li>
+                <li>النقل بين المدن البعيدة</li>
+                <li>وجود ظروف صحية تمنع المجهود</li>
+            </ul>
+
+            <h2>الخلاصة والتوصيات</h2>
+
+            <p>
+                النقل الاقتصادي ليس مجرد توفير المال، بل فن تحقيق أفضل قيمة مقابل المال المدفوع. 
+                بالتخطيط الذكي والاستعداد الجيد، يمكن تحقيق توفير يصل إلى 50% دون التضحية بجودة الخدمة.
+            </p>
+
+            <h3>الخطوات الثلاث للنجاح:</h3>
+            <ol>
+                <li><strong>خطط مبكراً:</strong> كلما زاد التخطيط، زاد التوفير</li>
+                <li><strong>كن مرناً:</strong> في التوقيت والطرق والحلول</li>
+                <li><strong>شارك بذكاء:</strong> لا تقم بكل شيء بنفسك ولا تعتمد على الآخرين كلياً</li>
+            </ol>
+
+            <p>
+                تذكر أن أفضل صفقة ليست دائماً الأرخص، بل التي تقدم أفضل قيمة لاحتياجاتك المحددة. 
+                استثمر الوقت في التخطيط، وستجني ثمار التوفير والرضا عن الخدمة.
+            </p>
+        </article>
+    </main>
+
+    <!-- JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- Professional Footer -->
+    <footer style="background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue)); color: white; padding: 4rem 0 2rem 0; margin-top: 5rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                
+                <!-- About Section -->
+                <div>
+                    <h3 style="color: var(--gold); font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-star"></i>
+                        نقل العفش جدة
+                    </h3>
+                    <p style="line-height: 1.8; margin-bottom: 1.5rem; opacity: 0.9;">
+                        منصة متخصصة في توفير أفضل خدمات نقل العفش في جدة. نربط العملاء بشركات النقل الموثوقة ونقدم المشورة المتخصصة لضمان تجربة نقل آمنة ومريحة.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" style="color: var(--gold); font-size: 1.5rem; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-link"></i>
+                        روابط سريعة
+                    </h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><a href="../../index.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-home"></i> الرئيسية
+                        </a></li>
+                        <li><a href="../../companies.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-building"></i> دليل الشركات
+                        </a></li>
+                        <li><a href="../../compare.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-balance-scale"></i> مقارنة الشركات
+                        </a></li>
+                        <li><a href="../../reviews.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-star"></i> المراجعات والتقييمات
+                        </a></li>
+                        <li><a href="../index.html" style="color: var(--gold); text-decoration: none; font-weight: 600;">
+                            <i class="fas fa-blog"></i> المدونة والنصائح
+                        </a></li>
+                        <li><a href="../../contact.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                            <i class="fas fa-phone"></i> اتصل بنا
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-tools"></i>
+                        خدماتنا
+                    </h4>
+                    <ul style="list-style: none; padding: 0; line-height: 2;">
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-truck"></i> نقل الأثاث المنزلي
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-building"></i> نقل المكاتب والشركات
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-box"></i> خدمات التغليف والتعبئة
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-warehouse"></i> التخزين المؤقت
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-shield-alt"></i> التأمين على الممتلكات
+                        </span></li>
+                        <li><span style="color: white; opacity: 0.9;">
+                            <i class="fas fa-headset"></i> استشارات نقل مجانية
+                        </span></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 style="color: var(--gold); font-size: 1.2rem; margin-bottom: 1.5rem;">
+                        <i class="fas fa-map-marker-alt"></i>
+                        معلومات التواصل
+                    </h4>
+                    <div style="line-height: 2.2;">
+                        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-phone" style="color: var(--gold);"></i>
+                            <div>
+                                <strong style="display: block;">خط الخدمة الرئيسي</strong>
+                                <a href="tel:+966501234567" style="color: white; text-decoration: none; opacity: 0.9;">+966 50 123 4567</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-envelope" style="color: var(--gold);"></i>
+                            <div>
+                                <strong style="display: block;">البريد الإلكتروني</strong>
+                                <a href="mailto:info@jeddahmoving.com" style="color: white; text-decoration: none; opacity: 0.9;">info@jeddahmoving.com</a>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 0.8rem; margin-bottom: 1rem;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--gold); margin-top: 0.2rem;"></i>
+                            <div>
+                                <strong style="display: block;">العنوان</strong>
+                                <span style="opacity: 0.9;">شارع الملك عبدالعزيز، جدة<br>المملكة العربية السعودية</span>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.8rem;">
+                            <i class="fas fa-clock" style="color: var(--gold);"></i>
+                            <div>
+                                <strong style="display: block;">ساعات العمل</strong>
+                                <span style="opacity: 0.9;">24/7 - خدمة على مدار الساعة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.2); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <div style="opacity: 0.9;">
+                    <p>&copy; 2024 نقل العفش جدة. جميع الحقوق محفوظة.</p>
+                </div>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <a href="../../terms.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                        شروط الاستخدام
+                    </a>
+                    <a href="../../privacy.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                        سياسة الخصوصية
+                    </a>
+                    <a href="../../contact.html" style="color: white; text-decoration: none; opacity: 0.9; transition: all 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--gold)'" onmouseout="this.style.opacity='0.9'; this.style.color='white'">
+                        اتصل بنا
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Action Button -->
+        <div style="position: fixed; bottom: 30px; left: 30px; z-index: 1000;">
+            <a href="tel:+966501234567" style="display: flex; align-items: center; justify-content: center; width: 60px; height: 60px; background: var(--gold); color: var(--primary-blue); border-radius: 50%; text-decoration: none; box-shadow: 0 5px 20px rgba(0,0,0,0.3); transition: all 0.3s; font-size: 1.5rem;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+    </footer>
+</body>
+</html> 

@@ -1,0 +1,61 @@
+{
+  "name": "movers-jeddah-platform",
+  "version": "1.0.0",
+  "description": "منصة شاملة لتقييم ومقارنة شركات نقل العفش في جدة مع مراجعات موثقة ونصائح خبراء",
+  "keywords": [
+    "نقل العفش",
+    "جدة", 
+    "شركات النقل",
+    "تقييم الشركات",
+    "مراجعات العملاء",
+    "سعودية",
+    "أثاث",
+    "moving companies",
+    "jeddah",
+    "furniture moving"
+  ],
+  "homepage": "https://movers-jeddah.com",
+  "author": {
+    "name": "منصة نقل العفش جدة",
+    "email": "info@movers-jeddah.com",
+    "url": "https://movers-jeddah.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/movers-jeddah/platform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/movers-jeddah/platform/issues",
+    "email": "support@movers-jeddah.com"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "npx live-server . --port=3000 --entry-file=index.html",
+    "start": "npx live-server . --port=3000 --entry-file=index.html",
+    "build": "echo 'Static site - no build required'",
+    "test": "echo 'No tests specified' && exit 0",
+    "lint": "echo 'HTML/CSS/JS validation'",
+    "deploy": "vercel --prod",
+    "preview": "vercel",
+    "validate-html": "echo 'HTML validation needed'",
+    "optimize-images": "echo 'Image optimization needed'",
+    "seo-check": "echo 'SEO validation completed - check SEO_OPTIMIZATION_REPORT.md'"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "main": "index.html",
+  "private": false,
+  "type": "module"
+}

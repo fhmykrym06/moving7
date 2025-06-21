@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منتدى المجتمع - نقل العفش جدة</title>
+    <meta name="description" content="منتدى مجتمع نقل العفش في جدة. شارك تجاربك، اطرح أسئلتك، واحصل على نصائح من الخبراء والمستخدمين.">
+    <meta name="keywords" content="منتدى نقل العفش, تجارب النقل, نصائح النقل, مناقشات, جدة">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="منتدى المجتمع - نقل العفش جدة">
+    <meta property="og:description" content="انضم لمجتمع نقل العفش في جدة وشارك تجاربك واحصل على النصائح">
+    <meta property="og:image" content="./public/images/furniture_moving_services_jeddah_professionals.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Alpine.js -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        :root {
+            --primary-blue: #1A237E;
+            --secondary-blue: #42A5F5;
+            --gold: #FFD700;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+            --success-green: #4CAF50;
+            --warning-red: #F44336;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .page-title {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            color: var(--dark-gray);
+            opacity: 0.8;
+        }
+
+        /* Forum Categories */
+        .forum-categories {
+            background: white;
+            padding: 3rem 0;
+            margin-bottom: 3rem;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .category-card {
+            background: var(--light-gray);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .category-icon {
+            font-size: 2.5rem;
+            color: var(--primary-blue);
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .category-description {
+            color: var(--dark-gray);
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .category-stats {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            opacity: 0.7;
+        }
+
+        /* Recent Topics */
+        .recent-topics {
+            padding: 3rem 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .new-topic-btn {
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .new-topic-btn:hover {
+            background: var(--secondary-blue);
+            transform: translateY(-2px);
+        }
+
+        /* Topic List */
+        .topics-list {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .topic-item {
+            display: flex;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--light-gray);
+            transition: background 0.3s;
+        }
+
+        .topic-item:hover {
+            background: var(--light-gray);
+        }
+
+        .topic-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 1rem;
+        }
+
+        .topic-content {
+            flex: 1;
+        }
+
+        .topic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark-gray);
+            text-decoration: none;
+        }
+
+        .topic-title:hover {
+            color: var(--primary-blue);
+        }
+
+        .topic-badge {
+            background: var(--gold);
+            color: var(--primary-blue);
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .topic-excerpt {
+            color: var(--dark-gray);
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .topic-meta {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            color: var(--dark-gray);
+            opacity: 0.6;
+        }
+
+        .topic-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        /* Sticky Topics */
+        .sticky-topics {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid var(--gold);
+            border-radius: 15px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .sticky-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+            font-weight: 600;
+        }
+
+        .sticky-list {
+            list-style: none;
+        }
+
+        .sticky-item {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .sticky-item:last-child {
+            border-bottom: none;
+        }
+
+        .sticky-link {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sticky-link:hover {
+            color: var(--primary-blue);
+        }
+
+        /* Expert Badge */
+        .expert-badge {
+            background: var(--success-green);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        /* Forum Stats */
+        .forum-stats {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 10px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--dark-gray);
+        }
+
+        /* Search Bar */
+        .forum-search {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 50px;
+            font-size: 1rem;
+            font-family: 'Tajawal', sans-serif;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .search-btn {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: var(--secondary-blue);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+            
+            .topic-header {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .topic-meta {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-star"></i> نقل العفش جدة
+                </div>
+                <nav>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="companies.html">دليل الشركات</a></li>
+                        <li><a href="compare.html">مقارنة</a></li>
+                        <li><a href="reviews.html">المراجعات</a></li>
+                        <li><a href="blog/index.html">المدونة</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">منتدى المجتمع</h1>
+            <p class="page-subtitle">شارك تجاربك، اطرح أسئلتك، واحصل على نصائح من مجتمع نقل العفش في جدة</p>
+        </div>
+    </section>
+
+    <!-- Forum Categories -->
+    <section class="forum-categories">
+        <div class="container">
+            <h2 class="section-title">أقسام المنتدى</h2>
+            
+            <div class="categories-grid">
+                <div class="category-card" onclick="alert('سيتم فتح قسم قصص وتجارب النقل')">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3 class="category-title">قصص وتجارب النقل</h3>
+                    </div>
+                    <p class="category-description">شارك تجربتك الشخصية في نقل العفش واقرأ تجارب الآخرين</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-comments"></i> 234 موضوع</span>
+                        <span><i class="fas fa-reply"></i> 1,567 رد</span>
+                    </div>
+                </div>
+
+                <div class="category-card" onclick="alert('سيتم فتح قسم اسأل الخبير')">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3 class="category-title">اسأل الخبير</h3>
+                    </div>
+                    <p class="category-description">اطرح أسئلتك على خبراء نقل العفش واحصل على إجابات موثوقة</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-comments"></i> 156 سؤال</span>
+                        <span><i class="fas fa-check-circle"></i> 142 إجابة</span>
+                    </div>
+                </div>
+
+                <div class="category-card" onclick="alert('سيتم فتح قسم نصائح وحيل')">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="category-title">نصائح وحيل</h3>
+                    </div>
+                    <p class="category-description">شارك واكتشف أفضل النصائح والحيل لنقل آمن وسهل</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-comments"></i> 89 موضوع</span>
+                        <span><i class="fas fa-heart"></i> 423 إعجاب</span>
+                    </div>
+                </div>
+
+                <div class="category-card" onclick="alert('سيتم فتح قسم مناقشة الشركات')">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="category-title">مناقشة شركات النقل</h3>
+                    </div>
+                    <p class="category-description">ناقش تجاربك مع شركات النقل المختلفة في جدة</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-comments"></i> 312 موضوع</span>
+                        <span><i class="fas fa-star"></i> 1,234 تقييم</span>
+                    </div>
+                </div>
+
+                <div class="category-card" onclick="alert('سيتم فتح قسم طلبات التوصية')">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <h3 class="category-title">طلبات التوصية</h3>
+                    </div>
+                    <p class="category-description">اطلب توصيات لأفضل شركات النقل حسب احتياجاتك</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-comments"></i> 178 طلب</span>
+                        <span><i class="fas fa-users"></i> 892 توصية</span>
+                    </div>
+                </div>
+
+                <div class="category-card" onclick="alert('سيتم فتح قسم العروض والتخفيضات')">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3 class="category-title">عروض وتخفيضات</h3>
+                    </div>
+                    <p class="category-description">أحدث العروض والتخفيضات من شركات نقل العفش</p>
+                    <div class="category-stats">
+                        <span><i class="fas fa-fire"></i> 45 عرض نشط</span>
+                        <span><i class="fas fa-clock"></i> محدث يومياً</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Topics -->
+    <section class="recent-topics">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">أحدث المواضيع</h2>
+                <button class="new-topic-btn">
+                    <i class="fas fa-plus"></i>
+                    موضوع جديد
+                </button>
+            </div>
+
+            <!-- Forum Search -->
+            <div class="forum-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="ابحث في المنتدى...">
+                    <button type="submit" class="search-btn">
+                        <i class="fas fa-search"></i> بحث
+                    </button>
+                </form>
+            </div>
+
+            <!-- Sticky Topics -->
+            <div class="sticky-topics">
+                <div class="sticky-header">
+                    <i class="fas fa-thumbtack"></i>
+                    مواضيع مثبتة
+                </div>
+                <ul class="sticky-list">
+                    <li class="sticky-item">
+                        <a href="#" class="sticky-link">
+                            <i class="fas fa-book"></i>
+                            دليل استخدام المنتدى وقوانين المشاركة
+                        </a>
+                    </li>
+                    <li class="sticky-item">
+                        <a href="#" class="sticky-link">
+                            <i class="fas fa-clipboard-list"></i>
+                            قائمة تحقق شاملة قبل النقل (قابلة للطباعة)
+                        </a>
+                    </li>
+                    <li class="sticky-item">
+                        <a href="#" class="sticky-link">
+                            <i class="fas fa-info-circle"></i>
+                            دليل المصطلحات الشائعة في مجال نقل العفش
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Topics List -->
+            <div class="topics-list" x-data="{ topics: getRecentTopics() }">
+                <template x-for="topic in topics" :key="topic.id">
+                    <div class="topic-item">
+                        <img :src="topic.avatar" :alt="topic.author" class="topic-avatar">
+                        <div class="topic-content">
+                            <div class="topic-header">
+                                <div>
+                                    <a href="#" class="topic-title" x-text="topic.title"></a>
+                                    <span x-show="topic.isExpert" class="expert-badge">خبير</span>
+                                </div>
+                                <span class="topic-badge" x-text="topic.category"></span>
+                            </div>
+                            <p class="topic-excerpt" x-text="topic.excerpt"></p>
+                            <div class="topic-meta">
+                                <span class="topic-meta-item">
+                                    <i class="fas fa-user"></i>
+                                    <span x-text="topic.author"></span>
+                                </span>
+                                <span class="topic-meta-item">
+                                    <i class="fas fa-clock"></i>
+                                    <span x-text="topic.time"></span>
+                                </span>
+                                <span class="topic-meta-item">
+                                    <i class="fas fa-comments"></i>
+                                    <span x-text="`${topic.replies} رد`"></span>
+                                </span>
+                                <span class="topic-meta-item">
+                                    <i class="fas fa-eye"></i>
+                                    <span x-text="`${topic.views} مشاهدة`"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!-- Forum Stats -->
+    <section class="forum-stats">
+        <div class="container">
+            <h2 class="section-title">إحصائيات المنتدى</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">1,245</div>
+                    <div class="stat-label">عضو نشط</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">867</div>
+                    <div class="stat-label">موضوع</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4,532</div>
+                    <div class="stat-label">مشاركة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">23</div>
+                    <div class="stat-label">خبير معتمد</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function getRecentTopics() {
+            return [
+                {
+                    id: 1,
+                    title: 'تجربتي مع نقل عفش فيلا كاملة من شمال جدة إلى جنوبها',
+                    excerpt: 'أشارك معكم تجربتي الكاملة في نقل عفش فيلا من حي الشاطئ إلى حي المحمدية، مع نصائح مهمة تعلمتها...',
+                    author: 'محمد الأحمدي',
+                    avatar: './public/images/author/ali_ahmed_alghamdi.png',
+                    category: 'تجارب',
+                    time: 'منذ ساعتين',
+                    replies: 23,
+                    views: 156,
+                    isExpert: false
+                },
+                {
+                    id: 2,
+                    title: 'ما هي أفضل طريقة لتغليف الأجهزة الكهربائية الحساسة؟',
+                    excerpt: 'لدي أجهزة كهربائية غالية وحساسة مثل تلفزيون 75 بوصة وأجهزة صوتية. ما هي أفضل طريقة لتغليفها؟',
+                    author: 'سارة المالكي',
+                    avatar: './public/images/author/aisha_ali_aljehani.png',
+                    category: 'سؤال',
+                    time: 'منذ 5 ساعات',
+                    replies: 12,
+                    views: 89,
+                    isExpert: false
+                },
+                {
+                    id: 3,
+                    title: '[نصيحة خبير] كيف تحمي أثاثك الخشبي من الخدوش أثناء النقل',
+                    excerpt: 'بناءً على خبرتي لأكثر من 15 عاماً في مجال نقل العفش، إليكم أهم النصائح لحماية الأثاث الخشبي...',
+                    author: 'عبدالله الخبير',
+                    avatar: './public/images/author/abdullah_ali_aljehani.png',
+                    category: 'نصائح',
+                    time: 'منذ يوم',
+                    replies: 45,
+                    views: 342,
+                    isExpert: true
+                },
+                {
+                    id: 4,
+                    title: 'تحذير من شركة وهمية تدعي نقل العفش بأسعار رخيصة',
+                    excerpt: 'أحذركم من شركة تتصل على الناس وتعرض أسعار رخيصة جداً للنقل. هذه تجربتي السيئة معهم...',
+                    author: 'أحمد الغامدي',
+                    avatar: './public/images/author/ali_ahmed_alghamdi.png',
+                    category: 'تحذير',
+                    time: 'منذ يومين',
+                    replies: 67,
+                    views: 523,
+                    isExpert: false
+                },
+                {
+                    id: 5,
+                    title: 'عرض خاص: خصم 30% على نقل العفش خلال أيام الأسبوع',
+                    excerpt: 'شركة النجم الذهبي تقدم خصم 30% على جميع خدمات النقل من الأحد إلى الأربعاء. العرض ساري حتى نهاية الشهر.',
+                    author: 'إدارة المنتدى',
+                    avatar: './public/images/author/ahmed_mohammed_alsaudi.png',
+                    category: 'عرض',
+                    time: 'منذ 3 أيام',
+                    replies: 8,
+                    views: 234,
+                    isExpert: false
+                }
+            ];
+        }
+    </script>
+</body>
+</html> 

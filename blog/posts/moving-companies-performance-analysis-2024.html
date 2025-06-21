@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحليل أداء شركات نقل العفش في جدة 2024: تقييمات ومؤشرات الجودة | منصة تقييم شركات النقل</title>
+    <meta name="description" content="تحليل شامل لأداء شركات نقل العفش في جدة لعام 2024 مع مؤشرات الجودة والتقييمات وإحصائيات مفصلة">
+    <meta name="keywords" content="تحليل أداء شركات النقل, تقييمات شركات نقل العفش, مؤشرات الجودة, إحصائيات الأداء جدة">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/blog.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <style>
+        .performance-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+        }
+        
+        .metric-icon {
+            font-size: 3rem;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin: 0.5rem 0;
+        }
+        
+        .metric-label {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-change {
+            font-size: 0.9rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        
+        .metric-change.positive {
+            background: #ecfdf5;
+            color: #059669;
+        }
+        
+        .metric-change.negative {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+        
+        .rating-distribution {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .rating-bars {
+            margin: 2rem 0;
+        }
+        
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            margin: 1rem 0;
+            gap: 1rem;
+        }
+        
+        .rating-label {
+            font-weight: 600;
+            min-width: 80px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .rating-progress {
+            flex: 1;
+            height: 20px;
+            background: #f3f4f6;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .rating-fill {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.8s ease;
+            position: relative;
+        }
+        
+        .rating-fill.excellent { background: linear-gradient(90deg, #059669, #10b981); }
+        .rating-fill.good { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .rating-fill.average { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+        .rating-fill.poor { background: linear-gradient(90deg, #dc2626, #ef4444); }
+        .rating-fill.very-poor { background: linear-gradient(90deg, #7f1d1d, #dc2626); }
+        
+        .rating-percentage {
+            min-width: 50px;
+            text-align: left;
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        .top-companies {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .company-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .company-rank {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background: #1e40af;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        
+        .company-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin: 1rem 0 0.5rem 0;
+        }
+        
+        .company-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        
+        .stars {
+            color: #fbbf24;
+        }
+        
+        .company-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 0.8rem;
+            background: #f8fafc;
+            border-radius: 8px;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e40af;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 0.3rem;
+        }
+        
+        .problem-analysis {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .problem-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .problem-item {
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #dc2626;
+            background: #fef2f2;
+        }
+        
+        .problem-title {
+            font-weight: 700;
+            color: #dc2626;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .problem-percentage {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #dc2626;
+            margin: 0.5rem 0;
+        }
+        
+        .chart-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .insight-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 4px solid #10b981;
+        }
+        
+        .insight-icon {
+            font-size: 2.5rem;
+            color: #10b981;
+            margin-bottom: 1rem;
+        }
+        
+        .insight-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 1rem;
+        }
+        
+        .improvement-recommendations {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+        
+        .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .recommendation-item {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .recommendation-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1><i class="fas fa-truck-moving"></i> منصة تقييم شركات نقل العفش</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">الرئيسية</a></li>
+                    <li><a href="../../companies.html">الشركات</a></li>
+                    <li><a href="../../compare.html">المقارنة</a></li>
+                    <li><a href="../index.html" class="active">المدونة</a></li>
+                    <li><a href="../../contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="blog-post">
+        <div class="container">
+            <article class="post-content">
+                <header class="post-header">
+                    <div class="breadcrumb">
+                        <a href="../../index.html">الرئيسية</a>
+                        <span>/</span>
+                        <a href="../index.html">المدونة</a>
+                        <span>/</span>
+                        <span>التقارير والإحصائيات</span>
+                    </div>
+                    
+                    <h1>تحليل أداء شركات نقل العفش في جدة 2024: تقييمات ومؤشرات الجودة</h1>
+                    
+                    <div class="post-meta">
+                        <div class="author-info">
+                            <img src="../../public/images/author/ali_ahmed_alghamdi.png" alt="علي أحمد الغامدي" class="author-avatar">
+                            <div>
+                                <span class="author-name">أحمد التقييم - محلل الأداء</span>
+                                <span class="post-date">28 يناير 2025</span>
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <span><i class="fas fa-clock"></i> 12 دقيقة قراءة</span>
+                            <span><i class="fas fa-eye"></i> 2,847 مشاهدة</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="post-image">
+                    <img src="../../public/images/cheap_furniture_removalists_jeddah_ksa.jpg" alt="تحليل أداء شركات نقل العفش في جدة 2024">
+                </div>
+
+                <div class="post-body">
+                    <p class="lead">
+                        تحليل شامل لأداء شركات نقل العفش في جدة خلال عام 2024، مع تقييم مؤشرات الجودة وتحليل تقييمات العملاء.
+                    </p>
+
+                    <section id="key-metrics">
+                        <h2><i class="fas fa-chart-line"></i> المؤشرات الرئيسية للأداء</h2>
+                        
+                        <div class="performance-metrics">
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="metric-value">4.2</div>
+                                <div class="metric-label">متوسط التقييم العام</div>
+                                <div class="metric-change positive">+0.3 من العام السابق</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="metric-value">87%</div>
+                                <div class="metric-label">الالتزام بالمواعيد</div>
+                                <div class="metric-change positive">+5% تحسن</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="metric-value">92%</div>
+                                <div class="metric-label">سلامة الأثاث</div>
+                                <div class="metric-change positive">+8% تحسن</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <div class="metric-value">78%</div>
+                                <div class="metric-label">معدل الرضا</div>
+                                <div class="metric-change positive">+12% تحسن</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="metric-value">74%</div>
+                                <div class="metric-label">جودة خدمة العملاء</div>
+                                <div class="metric-change positive">+6% تحسن</div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-icon">
+                                    <i class="fas fa-dollar-sign"></i>
+                                </div>
+                                <div class="metric-value">68%</div>
+                                <div class="metric-label">عدالة الأسعار</div>
+                                <div class="metric-change negative">-3% انخفاض</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="rating-distribution">
+                        <div class="rating-distribution">
+                            <h2><i class="fas fa-chart-bar"></i> توزيع التقييمات</h2>
+                            
+                            <div class="rating-bars">
+                                <div class="rating-bar">
+                                    <div class="rating-label">
+                                        <span>ممتاز</span>
+                                        <div class="stars">★★★★★</div>
+                                    </div>
+                                    <div class="rating-progress">
+                                        <div class="rating-fill excellent" style="width: 32%"></div>
+                                    </div>
+                                    <div class="rating-percentage">32%</div>
+                                </div>
+                                
+                                <div class="rating-bar">
+                                    <div class="rating-label">
+                                        <span>جيد جداً</span>
+                                        <div class="stars">★★★★☆</div>
+                                    </div>
+                                    <div class="rating-progress">
+                                        <div class="rating-fill good" style="width: 28%"></div>
+                                    </div>
+                                    <div class="rating-percentage">28%</div>
+                                </div>
+                                
+                                <div class="rating-bar">
+                                    <div class="rating-label">
+                                        <span>جيد</span>
+                                        <div class="stars">★★★☆☆</div>
+                                    </div>
+                                    <div class="rating-progress">
+                                        <div class="rating-fill average" style="width: 23%"></div>
+                                    </div>
+                                    <div class="rating-percentage">23%</div>
+                                </div>
+                                
+                                <div class="rating-bar">
+                                    <div class="rating-label">
+                                        <span>مقبول</span>
+                                        <div class="stars">★★☆☆☆</div>
+                                    </div>
+                                    <div class="rating-progress">
+                                        <div class="rating-fill poor" style="width: 12%"></div>
+                                    </div>
+                                    <div class="rating-percentage">12%</div>
+                                </div>
+                                
+                                <div class="rating-bar">
+                                    <div class="rating-label">
+                                        <span>ضعيف</span>
+                                        <div class="stars">★☆☆☆☆</div>
+                                    </div>
+                                    <div class="rating-progress">
+                                        <div class="rating-fill very-poor" style="width: 5%"></div>
+                                    </div>
+                                    <div class="rating-percentage">5%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="top-performers">
+                        <h2><i class="fas fa-trophy"></i> أفضل الشركات أداءً</h2>
+                        
+                        <div class="top-companies">
+                            <div class="company-card">
+                                <div class="company-rank">#1</div>
+                                <div class="company-name">شركة النقل المثالي</div>
+                                <div class="company-rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>(4.9/5)</span>
+                                </div>
+                                <div class="company-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-value">98%</div>
+                                        <div class="stat-label">رضا العملاء</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">95%</div>
+                                        <div class="stat-label">التزام المواعيد</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">856</div>
+                                        <div class="stat-label">عملية نقل</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">0.2%</div>
+                                        <div class="stat-label">معدل الأضرار</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="company-card">
+                                <div class="company-rank">#2</div>
+                                <div class="company-name">مؤسسة السرعة للنقل</div>
+                                <div class="company-rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>(4.8/5)</span>
+                                </div>
+                                <div class="company-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-value">96%</div>
+                                        <div class="stat-label">رضا العملاء</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">93%</div>
+                                        <div class="stat-label">التزام المواعيد</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">742</div>
+                                        <div class="stat-label">عملية نقل</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">0.5%</div>
+                                        <div class="stat-label">معدل الأضرار</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="company-card">
+                                <div class="company-rank">#3</div>
+                                <div class="company-name">شركة الأمان للعفش</div>
+                                <div class="company-rating">
+                                    <div class="stars">★★★★☆</div>
+                                    <span>(4.7/5)</span>
+                                </div>
+                                <div class="company-stats">
+                                    <div class="stat-item">
+                                        <div class="stat-value">94%</div>
+                                        <div class="stat-label">رضا العملاء</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">91%</div>
+                                        <div class="stat-label">التزام المواعيد</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">623</div>
+                                        <div class="stat-label">عملية نقل</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">0.8%</div>
+                                        <div class="stat-label">معدل الأضرار</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="performance-charts">
+                        <div class="chart-container">
+                            <h3 class="chart-title">تطور مؤشرات الأداء عبر الأشهر</h3>
+                            <canvas id="performanceChart"></canvas>
+                        </div>
+                        
+                        <div class="chart-container">
+                            <h3 class="chart-title">مقارنة الأداء حسب حجم الشركة</h3>
+                            <canvas id="comparisonChart"></canvas>
+                        </div>
+                    </section>
+
+                    <section id="common-problems">
+                        <div class="problem-analysis">
+                            <h2><i class="fas fa-exclamation-triangle"></i> أكثر المشاكل شيوعاً</h2>
+                            
+                            <div class="problem-list">
+                                <div class="problem-item">
+                                    <div class="problem-title">
+                                        <i class="fas fa-clock"></i>
+                                        التأخير في المواعيد
+                                    </div>
+                                    <div class="problem-percentage">28%</div>
+                                    <p>من الشكاوى المسجلة تتعلق بالتأخير في الوصول أو إنجاز العمل</p>
+                                </div>
+                                
+                                <div class="problem-item">
+                                    <div class="problem-title">
+                                        <i class="fas fa-broken-heart"></i>
+                                        أضرار الأثاث
+                                    </div>
+                                    <div class="problem-percentage">19%</div>
+                                    <p>من الشكاوى تخص أضرار أو خدوش في الأثاث أثناء النقل</p>
+                                </div>
+                                
+                                <div class="problem-item">
+                                    <div class="problem-title">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        مفاجآت في الأسعار
+                                    </div>
+                                    <div class="problem-percentage">16%</div>
+                                    <p>تكاليف إضافية غير متوقعة أو تغيير في السعر المتفق عليه</p>
+                                </div>
+                                
+                                <div class="problem-item">
+                                    <div class="problem-title">
+                                        <i class="fas fa-phone-slash"></i>
+                                        ضعف التواصل
+                                    </div>
+                                    <div class="problem-percentage">14%</div>
+                                    <p>صعوبة في التواصل مع الشركة أو عدم الرد على الاستفسارات</p>
+                                </div>
+                                
+                                <div class="problem-item">
+                                    <div class="problem-title">
+                                        <i class="fas fa-users"></i>
+                                        عدم احترافية العمال
+                                    </div>
+                                    <div class="problem-percentage">12%</div>
+                                    <p>سلوك غير مهني أو عدم خبرة كافية لدى فريق العمل</p>
+                                </div>
+                                
+                                <div class="problem-item">
+                                    <div class="problem-title">
+                                        <i class="fas fa-tools"></i>
+                                        نقص في المعدات
+                                    </div>
+                                    <div class="problem-percentage">11%</div>
+                                    <p>عدم توفر المعدات اللازمة أو استخدام أدوات غير مناسبة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="insights">
+                        <h2><i class="fas fa-lightbulb"></i> رؤى وتحليلات</h2>
+                        
+                        <div class="insights-grid">
+                            <div class="insight-card">
+                                <div class="insight-icon">
+                                    <i class="fas fa-trend-up"></i>
+                                </div>
+                                <h3 class="insight-title">تحسن عام في الأداء</h3>
+                                <p>شهد عام 2024 تحسناً ملحوظاً في معظم مؤشرات الأداء مقارنة بالعام السابق، خاصة في مجال سلامة الأثاث والالتزام بالمواعيد.</p>
+                            </div>
+                            
+                            <div class="insight-card">
+                                <div class="insight-icon">
+                                    <i class="fas fa-award"></i>
+                                </div>
+                                <h3 class="insight-title">هيمنة الشركات الكبيرة</h3>
+                                <p>تحتل الشركات الكبيرة (12 شركة) المراكز العشرة الأولى في التقييمات، مما يعكس أهمية الخبرة والموارد في تقديم خدمة متميزة.</p>
+                            </div>
+                            
+                            <div class="insight-card">
+                                <div class="insight-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="insight-title">فجوة في الأسعار</h3>
+                                <p>انخفاض تقييم عدالة الأسعار يشير إلى وجود تباين كبير في التسعير والحاجة لمزيد من الشفافية.</p>
+                            </div>
+                            
+                            <div class="insight-card">
+                                <div class="insight-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3 class="insight-title">تحدي المواعيد</h3>
+                                <p>رغم التحسن، لا تزال مشكلة التأخير في المواعيد هي الشكوى الأكثر شيوعاً بين العملاء.</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="recommendations">
+                        <div class="improvement-recommendations">
+                            <h2><i class="fas fa-bullseye"></i> توصيات لتحسين الأداء</h2>
+                            
+                            <div class="recommendations-grid">
+                                <div class="recommendation-item">
+                                    <h3 class="recommendation-title">
+                                        <i class="fas fa-clock"></i>
+                                        تحسين إدارة الوقت
+                                    </h3>
+                                    <ul>
+                                        <li>تطوير نظام جدولة ذكي</li>
+                                        <li>إضافة هامش زمني للطوارئ</li>
+                                        <li>تحسين تقدير أوقات العمل</li>
+                                        <li>تدريب العمال على إدارة الوقت</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="recommendation-item">
+                                    <h3 class="recommendation-title">
+                                        <i class="fas fa-shield-alt"></i>
+                                        تعزيز سلامة الأثاث
+                                    </h3>
+                                    <ul>
+                                        <li>استخدام مواد تغليف عالية الجودة</li>
+                                        <li>تدريب العمال على تقنيات النقل الآمن</li>
+                                        <li>فحص الأثاث قبل وبعد النقل</li>
+                                        <li>توفير تأمين شامل ضد الأضرار</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="recommendation-item">
+                                    <h3 class="recommendation-title">
+                                        <i class="fas fa-dollar-sign"></i>
+                                        شفافية التسعير
+                                    </h3>
+                                    <ul>
+                                        <li>وضع لائحة أسعار واضحة</li>
+                                        <li>شرح تفصيلي للتكاليف الإضافية</li>
+                                        <li>تقديم عروض أسعار مكتوبة</li>
+                                        <li>عدم تغيير السعر بعد الاتفاق</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="recommendation-item">
+                                    <h3 class="recommendation-title">
+                                        <i class="fas fa-headset"></i>
+                                        تطوير خدمة العملاء
+                                    </h3>
+                                    <ul>
+                                        <li>إنشاء مركز اتصال متخصص</li>
+                                        <li>تدريب موظفي خدمة العملاء</li>
+                                        <li>تطوير تطبيق للمتابعة المباشرة</li>
+                                        <li>نظام متابعة ما بعد الخدمة</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <div class="methodology">
+                        <h2><i class="fas fa-microscope"></i> منهجية التحليل</h2>
+                        <p>تم إعداد هذا التحليل من خلال:</p>
+                        <ul>
+                            <li><strong>مراجعة 15,000+ تقييم</strong> من العملاء عبر المنصة</li>
+                            <li><strong>تحليل 8,500+ عملية نقل</strong> منجزة خلال 2024</li>
+                            <li><strong>مقابلات مع 150+ عميل</strong> لجمع ملاحظات مفصلة</li>
+                            <li><strong>دراسة أداء 247 شركة</strong> مرخصة في جدة</li>
+                            <li><strong>تحليل الشكاوى والمشاكل</strong> المبلغ عنها</li>
+                            <li><strong>مقارنة البيانات</strong> مع الأعوام السابقة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <footer class="post-footer">
+                    <div class="author-bio">
+                        <img src="../../public/images/author/ali_ahmed_alghamdi.png" alt="علي أحمد الغامدي" class="author-image">
+                        <div class="bio-content">
+                            <h3>أحمد التقييم</h3>
+                            <p>محلل أداء متخصص في قطاع الخدمات مع خبرة 14 عاماً في تحليل بيانات العملاء وقياس مؤشرات الجودة.</p>
+                        </div>
+                    </div>
+                </footer>
+            </article>
+
+            <aside class="sidebar">
+                <div class="widget performance-summary">
+                    <h3><i class="fas fa-chart-pie"></i> ملخص الأداء</h3>
+                    <ul>
+                        <li><strong>متوسط التقييم:</strong> 4.2/5</li>
+                        <li><strong>الالتزام بالمواعيد:</strong> 87%</li>
+                        <li><strong>سلامة الأثاث:</strong> 92%</li>
+                        <li><strong>رضا العملاء:</strong> 78%</li>
+                    </ul>
+                </div>
+
+                <div class="widget top-issues">
+                    <h3>أكثر المشاكل</h3>
+                    <ol>
+                        <li>التأخير في المواعيد (28%)</li>
+                        <li>أضرار الأثاث (19%)</li>
+                        <li>مفاجآت الأسعار (16%)</li>
+                    </ol>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>منصة تقييم شركات نقل العفش</h3>
+                    <p>منصتك الموثوقة لاختيار أفضل شركات نقل العفش في جدة</p>
+                </div>
+                <div class="footer-section">
+                    <h4>التقارير والإحصائيات</h4>
+                    <ul>
+                        <li><a href="jeddah-moving-market-report-2024.html">تقرير السوق 2024</a></li>
+                        <li><a href="moving-companies-performance-analysis-2024.html">تحليل أداء الشركات</a></li>
+                        <li><a href="../index.html">جميع المقالات</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 منصة تقييم شركات نقل العفش بجدة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Performance Trends Chart
+        const ctx1 = document.getElementById('performanceChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'],
+                datasets: [
+                    {
+                        label: 'رضا العملاء',
+                        data: [72, 74, 76, 75, 78, 79, 77, 80, 81, 79, 82, 78],
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'الالتزام بالمواعيد',
+                        data: [82, 84, 86, 85, 88, 89, 87, 90, 91, 89, 92, 87],
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.4
+                    },
+                    {
+                        label: 'سلامة الأثاث',
+                        data: [88, 89, 91, 90, 93, 94, 92, 95, 96, 94, 97, 92],
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+
+        // Company Size Comparison Chart
+        const ctx2 = document.getElementById('comparisonChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'radar',
+            data: {
+                labels: ['التقييم العام', 'الالتزام بالمواعيد', 'سلامة الأثاث', 'خدمة العملاء', 'عدالة الأسعار', 'الاحترافية'],
+                datasets: [
+                    {
+                        label: 'الشركات الكبيرة',
+                        data: [4.6, 92, 95, 88, 72, 90],
+                        borderColor: '#1e40af',
+                        backgroundColor: 'rgba(30, 64, 175, 0.2)',
+                        pointBackgroundColor: '#1e40af'
+                    },
+                    {
+                        label: 'الشركات المتوسطة',
+                        data: [4.2, 87, 92, 76, 68, 82],
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                        pointBackgroundColor: '#f59e0b'
+                    },
+                    {
+                        label: 'الشركات الصغيرة',
+                        data: [3.8, 78, 85, 65, 70, 72],
+                        borderColor: '#dc2626',
+                        backgroundColor: 'rgba(220, 38, 38, 0.2)',
+                        pointBackgroundColor: '#dc2626'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top'
+                    }
+                },
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+    <script src="../../js/main.js"></script>
+</body>
+</html> 

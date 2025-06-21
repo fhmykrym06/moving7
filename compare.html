@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقارنة شركات نقل العفش في جدة | قارن حتى 5 شركات</title>
+    <meta name="description" content="قارن بين أفضل شركات نقل العفش في جدة. مقارنة شاملة للأسعار، الخدمات، التقييمات، ومعلومات التواصل لاتخاذ القرار الأمثل.">
+    <meta name="keywords" content="مقارنة شركات نقل العفش, مقارنة أسعار النقل, أفضل شركات النقل جدة">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="مقارنة شركات نقل العفش في جدة">
+    <meta property="og:description" content="أداة مقارنة شاملة لشركات نقل العفش في جدة">
+    <meta property="og:image" content="public/images/furniture_moving_services_jeddah_professionals.jpg">
+    <meta property="og:type" content="website">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        :root {
+            --primary-blue: #1A237E;
+            --secondary-blue: #42A5F5;
+            --gold: #FFD700;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+            --success-green: #4CAF50;
+            --warning-red: #F44336;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--gold);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .page-title {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* Company Selection */
+        .selection-section {
+            background: white;
+            padding: 2rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .selection-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .selection-title {
+            color: var(--primary-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .company-search {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 10px;
+            max-height: 300px;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .search-result-item {
+            padding: 1rem;
+            border-bottom: 1px solid var(--light-gray);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .search-result-item:hover {
+            background: var(--light-gray);
+        }
+
+        .search-result-item:last-child {
+            border-bottom: none;
+        }
+
+        .selected-companies {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .selected-company {
+            background: var(--primary-blue);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+
+        .remove-company {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .remove-company:hover {
+            opacity: 1;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            padding: 3rem 0;
+        }
+
+        .comparison-table-container {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 1.5rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .comparison-table th {
+            background: var(--primary-blue);
+            color: white;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .comparison-table th:first-child {
+            text-align: right;
+            background: var(--secondary-blue);
+        }
+
+        .comparison-table td:first-child {
+            background: var(--light-gray);
+            font-weight: 600;
+            text-align: right;
+            color: var(--primary-blue);
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .company-name {
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-top: 0.5rem;
+        }
+
+        .rating-stars {
+            display: flex;
+            justify-content: center;
+            gap: 0.2rem;
+        }
+
+        .star {
+            color: var(--gold);
+            font-size: 1.2rem;
+        }
+
+        .star.empty {
+            color: var(--light-gray);
+        }
+
+        .price {
+            color: var(--success-green);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .service-list {
+            text-align: right;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            justify-content: center;
+        }
+
+        .check-icon {
+            color: var(--success-green);
+        }
+
+        .cross-icon {
+            color: var(--warning-red);
+        }
+
+        .contact-info {
+            text-align: center;
+        }
+
+        .phone-number {
+            color: var(--primary-blue);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .website-link {
+            color: var(--secondary-blue);
+            text-decoration: none;
+        }
+
+        .website-link:hover {
+            text-decoration: underline;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-blue);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--success-green);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #45a049;
+        }
+
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .empty-icon {
+            font-size: 4rem;
+            color: var(--light-gray);
+            margin-bottom: 1rem;
+        }
+
+        .empty-title {
+            color: var(--dark-gray);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-text {
+            color: var(--dark-gray);
+            opacity: 0.7;
+            margin-bottom: 2rem;
+        }
+
+        .browse-companies-btn {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .browse-companies-btn:hover {
+            background: var(--secondary-blue);
+        }
+
+        /* Export Options */
+        .export-section {
+            background: white;
+            padding: 2rem;
+            margin-top: 2rem;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .export-title {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .export-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .comparison-table-container {
+                overflow-x: auto;
+            }
+
+            .comparison-table {
+                min-width: 800px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .selected-companies {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .export-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body x-data="comparisonApp()">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-star"></i> نقل العفش جدة
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="companies.html" class="nav-link">دليل الشركات</a>
+                <a href="compare.html" class="nav-link active">مقارنة</a>
+                <a href="reviews.html" class="nav-link">المراجعات</a>
+                <a href="blog/index.html" class="nav-link">المدونة</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">مقارنة شركات نقل العفش</h1>
+            <p class="page-subtitle">قارن بين أفضل شركات النقل لاتخاذ القرار الأمثل</p>
+        </div>
+    </section>
+
+    <!-- Company Selection -->
+    <section class="selection-section">
+        <div class="container">
+            <div class="selection-header">
+                <h2 class="selection-title">اختر الشركات للمقارنة (حتى 5 شركات)</h2>
+                <div class="company-search">
+                    <input 
+                        type="text" 
+                        class="search-input" 
+                        placeholder="ابحث عن شركة لإضافتها للمقارنة..."
+                        x-model="searchQuery"
+                        @input="searchCompanies()"
+                    >
+                    <div class="search-results" x-show="showSearchResults && searchResults.length > 0">
+                        <template x-for="company in searchResults" :key="company.id">
+                            <div 
+                                class="search-result-item"
+                                @click="addCompany(company)"
+                                x-show="!isCompanySelected(company.id)"
+                            >
+                                <strong x-text="company.name"></strong> - <span x-text="company.location"></span>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+            <div class="selected-companies">
+                <template x-for="company in selectedCompanies" :key="company.id">
+                    <div class="selected-company">
+                        <span x-text="company.name"></span>
+                        <button class="remove-company" @click="removeCompany(company.id)">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="comparison-section">
+        <div class="container">
+            <div x-show="selectedCompanies.length === 0" class="empty-state">
+                <div class="empty-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <h3 class="empty-title">ابدأ المقارنة</h3>
+                <p class="empty-text">اختر شركتين أو أكثر لبدء المقارنة بينها</p>
+                <a href="companies.html" class="browse-companies-btn">
+                    تصفح الشركات
+                </a>
+            </div>
+
+            <div x-show="selectedCompanies.length > 0" class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>المعايير</th>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <th>
+                                    <img :src="company.logo" :alt="company.name" class="company-logo">
+                                    <div class="company-name" x-text="company.name"></div>
+                                </th>
+                            </template>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rating -->
+                        <tr>
+                            <td>التقييم الإجمالي</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td>
+                                    <div class="rating-stars">
+                                        <template x-for="i in 5" :key="i">
+                                            <i class="fas fa-star star" :class="{'empty': i > company.rating}"></i>
+                                        </template>
+                                    </div>
+                                    <div><span x-text="company.rating"></span>/5</div>
+                                    <div>(<span x-text="company.reviewCount"></span> مراجعة)</div>
+                                </td>
+                            </template>
+                        </tr>
+
+                        <!-- Established -->
+                        <tr>
+                            <td>سنة التأسيس</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td x-text="company.established"></td>
+                            </template>
+                        </tr>
+
+                        <!-- Starting Price -->
+                        <tr>
+                            <td>السعر الأساسي</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td>
+                                    <div class="price">من <span x-text="company.startingPrice"></span> ريال</div>
+                                </td>
+                            </template>
+                        </tr>
+
+                        <!-- Location -->
+                        <tr>
+                            <td>المنطقة</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td x-text="company.location"></td>
+                            </template>
+                        </tr>
+
+                        <!-- Services -->
+                        <tr>
+                            <td>الخدمات المتاحة</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td class="service-list">
+                                    <template x-for="service in company.services" :key="service">
+                                        <div class="service-item">
+                                            <i class="fas fa-check check-icon"></i>
+                                            <span x-text="service"></span>
+                                        </div>
+                                    </template>
+                                </td>
+                            </template>
+                        </tr>
+
+                        <!-- Verification -->
+                        <tr>
+                            <td>التوثيق</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td>
+                                    <template x-if="company.verified">
+                                        <div class="service-item">
+                                            <i class="fas fa-check-circle check-icon"></i>
+                                            <span>موثقة</span>
+                                        </div>
+                                    </template>
+                                    <template x-if="!company.verified">
+                                        <div class="service-item">
+                                            <i class="fas fa-times-circle cross-icon"></i>
+                                            <span>غير موثقة</span>
+                                        </div>
+                                    </template>
+                                </td>
+                            </template>
+                        </tr>
+
+                        <!-- Contact -->
+                        <tr>
+                            <td>التواصل</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td class="contact-info">
+                                    <div class="phone-number" x-text="company.phone"></div>
+                                    <a :href="company.website" class="website-link" target="_blank">الموقع الإلكتروني</a>
+                                </td>
+                            </template>
+                        </tr>
+
+                        <!-- Actions -->
+                        <tr>
+                            <td>الإجراءات</td>
+                            <template x-for="company in selectedCompanies" :key="company.id">
+                                <td>
+                                    <div class="action-buttons">
+                                        <a :href="'company-profile.html?id=' + company.id" class="btn btn-primary">
+                                            عرض التفاصيل
+                                        </a>
+                                        <a :href="'tel:' + company.phone" class="btn btn-success">
+                                            اتصال
+                                        </a>
+                                        <a href="#" class="btn btn-secondary" @click="requestQuote(company)">
+                                            طلب عرض سعر
+                                        </a>
+                                    </div>
+                                </td>
+                            </template>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Export Section -->
+            <div x-show="selectedCompanies.length > 0" class="export-section">
+                <h3 class="export-title">تصدير المقارنة</h3>
+                <div class="export-buttons">
+                    <button class="btn btn-primary" @click="printComparison()">
+                        <i class="fas fa-print"></i> طباعة
+                    </button>
+                    <button class="btn btn-secondary" @click="shareComparison()">
+                        <i class="fas fa-share"></i> مشاركة
+                    </button>
+                    <button class="btn btn-success" @click="downloadPDF()">
+                        <i class="fas fa-download"></i> تحميل PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function comparisonApp() {
+            return {
+                searchQuery: '',
+                showSearchResults: false,
+                selectedCompanies: [],
+                searchResults: [],
+
+                companies: [
+                    {
+                        id: 1,
+                        name: 'شركة البراق لنقل العفش',
+                        logo: 'public/images/furniture_moving_services_jeddah_professionals.jpg',
+                        rating: 4.8,
+                        reviewCount: 245,
+                        established: 2015,
+                        location: 'شمال جدة - حي الروضة',
+                        services: ['نقل منزلي', 'تغليف', 'تركيب', 'تخزين'],
+                        startingPrice: 300,
+                        verified: true,
+                        phone: '0112345678',
+                        website: 'https://alboraq-moving.com'
+                    },
+                    {
+                        id: 2,
+                        name: 'شركة الصقر للنقل',
+                        logo: 'public/images/affordable_moving_company_jeddah_saudi_arabia.jpg',
+                        rating: 4.5,
+                        reviewCount: 189,
+                        established: 2018,
+                        location: 'جنوب جدة - حي العزيزية',
+                        services: ['نقل منزلي', 'نقل تجاري'],
+                        startingPrice: 250,
+                        verified: true,
+                        phone: '0112345679',
+                        website: 'https://alsakr-moving.com'
+                    },
+                    {
+                        id: 3,
+                        name: 'النورس لخدمات النقل',
+                        logo: 'public/images/furniture_moving_experts_jeddah_city_saudi.jpg',
+                        rating: 4.7,
+                        reviewCount: 312,
+                        established: 2012,
+                        location: 'وسط جدة - حي البلد',
+                        services: ['نقل منزلي', 'تخزين', 'تغليف', 'فك وتركيب'],
+                        startingPrice: 350,
+                        verified: true,
+                        phone: '0112345680',
+                        website: 'https://alnoors-moving.com'
+                    },
+                    {
+                        id: 4,
+                        name: 'شركة النجاح السريع',
+                        logo: 'public/images/business_relocation_experts_jeddah_ksa.jpg',
+                        rating: 4.3,
+                        reviewCount: 156,
+                        established: 2020,
+                        location: 'شرق جدة - حي النزهة',
+                        services: ['نقل منزلي', 'نقل مكاتب'],
+                        startingPrice: 280,
+                        verified: false,
+                        phone: '0112345681',
+                        website: 'https://alnajah-moving.com'
+                    },
+                    {
+                        id: 5,
+                        name: 'الفهد لنقل الأثاث',
+                        logo: 'public/images/furniture_moving_specialists_jeddah_city.jpg',
+                        rating: 4.6,
+                        reviewCount: 203,
+                        established: 2016,
+                        location: 'غرب جدة - حي الشاطئ',
+                        services: ['نقل منزلي', 'تغليف', 'فك وتركيب'],
+                        startingPrice: 320,
+                        verified: true,
+                        phone: '0112345682',
+                        website: 'https://alfahd-moving.com'
+                    }
+                ],
+
+                searchCompanies() {
+                    if (this.searchQuery.length > 1) {
+                        this.searchResults = this.companies.filter(company => 
+                            company.name.includes(this.searchQuery) ||
+                            company.location.includes(this.searchQuery)
+                        );
+                        this.showSearchResults = true;
+                    } else {
+                        this.showSearchResults = false;
+                        this.searchResults = [];
+                    }
+                },
+
+                addCompany(company) {
+                    if (this.selectedCompanies.length < 5 && !this.isCompanySelected(company.id)) {
+                        this.selectedCompanies.push(company);
+                        this.searchQuery = '';
+                        this.showSearchResults = false;
+                        this.searchResults = [];
+                    }
+                },
+
+                removeCompany(companyId) {
+                    this.selectedCompanies = this.selectedCompanies.filter(company => company.id !== companyId);
+                },
+
+                isCompanySelected(companyId) {
+                    return this.selectedCompanies.some(company => company.id === companyId);
+                },
+
+                requestQuote(company) {
+                    alert(`سيتم توجيهك لطلب عرض سعر من ${company.name}`);
+                },
+
+                printComparison() {
+                    window.print();
+                },
+
+                shareComparison() {
+                    if (navigator.share) {
+                        navigator.share({
+                            title: 'مقارنة شركات نقل العفش',
+                            text: 'شاهد مقارنة شركات نقل العفش في جدة',
+                            url: window.location.href
+                        });
+                    } else {
+                        // Fallback for browsers that don't support Web Share API
+                        const text = window.location.href;
+                        navigator.clipboard.writeText(text).then(() => {
+                            alert('تم نسخ رابط المقارنة');
+                        });
+                    }
+                },
+
+                downloadPDF() {
+                    alert('سيتم إضافة ميزة تحميل PDF قريباً');
+                }
+            }
+        }
+
+        // Hide search results when clicking outside
+        document.addEventListener('click', function(event) {
+            const searchContainer = event.target.closest('.company-search');
+            if (!searchContainer) {
+                Alpine.store('comparison')?.hideSearchResults();
+            }
+        });
+    </script>
+</body>
+</html> 

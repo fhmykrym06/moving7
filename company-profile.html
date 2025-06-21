@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة البراق لنقل العفش | ملف تعريفي شامل</title>
+    <meta name="description" content="ملف تعريفي شامل لشركة البراق لنقل العفش في جدة. خدمات النقل، التقييمات، الأسعار، ومعلومات التواصل.">
+    <meta name="keywords" content="شركة البراق نقل العفش, تقييم شركة البراق, أسعار البراق للنقل">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="شركة البراق لنقل العفش في جدة">
+    <meta property="og:description" content="شركة البراق الرائدة في خدمات نقل العفش في جدة مع تقييم 4.8 نجوم">
+    <meta property="og:image" content="public/images/furniture_moving_services_jeddah_professionals.jpg">
+    <meta property="og:type" content="business.business">
+    
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <style>
+        :root {
+            --primary-blue: #1A237E;
+            --secondary-blue: #42A5F5;
+            --gold: #FFD700;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
+            --success-green: #4CAF50;
+            --warning-red: #F44336;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--gold);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: white;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .breadcrumb-list a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .breadcrumb-list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Company Header */
+        .company-header {
+            background: white;
+            padding: 3rem 0;
+        }
+
+        .company-header-content {
+            display: grid;
+            grid-template-columns: 150px 1fr auto;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .company-logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 15px;
+            object-fit: cover;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .company-info {
+            flex: 1;
+        }
+
+        .company-name {
+            color: var(--primary-blue);
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-subtitle {
+            color: var(--dark-gray);
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-bottom: 1rem;
+        }
+
+        .company-badges {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .badge-verified {
+            background: var(--success-green);
+            color: white;
+        }
+
+        .badge-premium {
+            background: var(--gold);
+            color: var(--primary-blue);
+        }
+
+        .badge-established {
+            background: var(--light-gray);
+            color: var(--dark-gray);
+        }
+
+        .rating-summary {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 0.2rem;
+        }
+
+        .star {
+            color: var(--gold);
+            font-size: 1.5rem;
+        }
+
+        .star.empty {
+            color: var(--light-gray);
+        }
+
+        .rating-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+        }
+
+        .rating-count {
+            color: var(--dark-gray);
+            opacity: 0.8;
+        }
+
+        .quick-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-icon {
+            color: var(--primary-blue);
+            width: 16px;
+        }
+
+        .company-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary-blue);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .btn-success {
+            background: var(--success-green);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #45a049;
+        }
+
+        /* Main Content */
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            padding: 3rem 0;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .service-item {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-item:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .service-icon {
+            font-size: 2rem;
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .service-item:hover .service-icon {
+            color: white;
+        }
+
+        .service-name {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-description {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Pricing Table */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .pricing-table th,
+        .pricing-table td {
+            padding: 1rem;
+            text-align: right;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .pricing-table th {
+            background: var(--light-gray);
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .pricing-table .price {
+            color: var(--success-green);
+            font-weight: 700;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            aspect-ratio: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Reviews Section */
+        .review-card {
+            border: 1px solid var(--light-gray);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+
+        .review-rating {
+            display: flex;
+            gap: 0.2rem;
+        }
+
+        .review-text {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .review-date {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Sidebar */
+        .sidebar-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            height: fit-content;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .contact-info li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            color: var(--primary-blue);
+            width: 20px;
+        }
+
+        .contact-info a {
+            color: var(--dark-gray);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: var(--primary-blue);
+        }
+
+        .working-hours {
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+
+        .location-map {
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-gray);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .company-header-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .company-logo {
+                justify-self: center;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body x-data="companyProfileApp()">
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                <i class="fas fa-star"></i> نقل العفش جدة
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="companies.html" class="nav-link">دليل الشركات</a>
+                <a href="compare.html" class="nav-link">مقارنة</a>
+                <a href="reviews.html" class="nav-link">المراجعات</a>
+                <a href="blog/index.html" class="nav-link">المدونة</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="container">
+            <div class="breadcrumb-list">
+                <a href="index.html">الرئيسية</a>
+                <i class="fas fa-chevron-left"></i>
+                <a href="companies.html">دليل الشركات</a>
+                <i class="fas fa-chevron-left"></i>
+                <span x-text="company.name">شركة البراق لنقل العفش</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Company Header -->
+    <section class="company-header">
+        <div class="container">
+            <div class="company-header-content">
+                <img :src="company.logo" :alt="company.name" class="company-logo">
+                
+                <div class="company-info">
+                    <h1 class="company-name" x-text="company.name"></h1>
+                    <p class="company-subtitle" x-text="company.subtitle"></p>
+                    
+                    <div class="company-badges">
+                        <span class="badge badge-verified" x-show="company.verified">
+                            <i class="fas fa-check-circle"></i> موثقة
+                        </span>
+                        <span class="badge badge-premium" x-show="company.premium">
+                            <i class="fas fa-crown"></i> خدمة مميزة
+                        </span>
+                        <span class="badge badge-established">
+                            تأسست <span x-text="company.established"></span>
+                        </span>
+                    </div>
+
+                    <div class="rating-summary">
+                        <div class="rating-stars">
+                            <template x-for="i in 5" :key="i">
+                                <i class="fas fa-star star" :class="{'empty': i > company.rating}"></i>
+                            </template>
+                        </div>
+                        <span class="rating-value" x-text="company.rating"></span>
+                        <span class="rating-count">(<span x-text="company.reviewCount"></span> مراجعة)</span>
+                    </div>
+
+                    <div class="quick-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt info-icon"></i>
+                            <span x-text="company.location"></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-truck info-icon"></i>
+                            <span x-text="company.fleetSize + ' مركبة'"></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-users info-icon"></i>
+                            <span x-text="company.employees + ' موظف'"></span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-certificate info-icon"></i>
+                            <span>ترخيص رقم <span x-text="company.licenseNumber"></span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="company-actions">
+                    <button class="btn btn-primary" @click="requestQuote()">
+                        <i class="fas fa-file-invoice"></i> طلب عرض سعر
+                    </button>
+                    <a :href="'tel:' + company.phone" class="btn btn-success">
+                        <i class="fas fa-phone"></i> اتصال مباشر
+                    </a>
+                    <button class="btn btn-secondary" @click="addToCompare()">
+                        <i class="fas fa-balance-scale"></i> إضافة للمقارنة
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="main-content">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 3rem;">
+                <div>
+                    <!-- Services Section -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-concierge-bell"></i>
+                            الخدمات المقدمة
+                        </h2>
+                        <div class="services-grid">
+                            <template x-for="service in company.services" :key="service.name">
+                                <div class="service-item">
+                                    <div class="service-icon">
+                                        <i :class="service.icon"></i>
+                                    </div>
+                                    <div class="service-name" x-text="service.name"></div>
+                                    <div class="service-description" x-text="service.description"></div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Section -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-dollar-sign"></i>
+                            الأسعار والباقات
+                        </h2>
+                        <table class="pricing-table">
+                            <thead>
+                                <tr>
+                                    <th>نوع الخدمة</th>
+                                    <th>السعر</th>
+                                    <th>الوصف</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template x-for="price in company.pricing" :key="price.service">
+                                    <tr>
+                                        <td x-text="price.service"></td>
+                                        <td class="price" x-text="price.price + ' ريال'"></td>
+                                        <td x-text="price.description"></td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Fleet Gallery -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-images"></i>
+                            صور الأسطول والمعدات
+                        </h2>
+                        <div class="gallery-grid">
+                            <template x-for="image in company.gallery" :key="image">
+                                <div class="gallery-item">
+                                    <img :src="image" :alt="'صور من ' + company.name">
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div class="content-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-star"></i>
+                            آراء العملاء
+                        </h2>
+                        <template x-for="review in company.reviews" :key="review.id">
+                            <div class="review-card">
+                                <div class="review-header">
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-avatar" x-text="review.author.charAt(0)"></div>
+                                        <div>
+                                            <strong x-text="review.author"></strong>
+                                            <div class="review-date" x-text="review.date"></div>
+                                        </div>
+                                    </div>
+                                    <div class="review-rating">
+                                        <template x-for="i in 5" :key="i">
+                                            <i class="fas fa-star star" :class="{'empty': i > review.rating}"></i>
+                                        </template>
+                                    </div>
+                                </div>
+                                <div class="review-text" x-text="review.text"></div>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div>
+                    <!-- Contact Information -->
+                    <div class="sidebar-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-address-book"></i>
+                            معلومات التواصل
+                        </h3>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="fas fa-phone contact-icon"></i>
+                                <a :href="'tel:' + company.phone" x-text="company.phone"></a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <a :href="'mailto:' + company.email" x-text="company.email"></a>
+                            </li>
+                            <li>
+                                <i class="fas fa-globe contact-icon"></i>
+                                <a :href="company.website" target="_blank">الموقع الإلكتروني</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker-alt contact-icon"></i>
+                                <span x-text="company.fullAddress"></span>
+                            </li>
+                        </ul>
+                        
+                        <div class="working-hours">
+                            <h4 style="margin-bottom: 1rem; color: var(--primary-blue);">ساعات العمل</h4>
+                            <template x-for="hours in company.workingHours" :key="hours.day">
+                                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                                    <span x-text="hours.day"></span>
+                                    <span x-text="hours.time"></span>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+
+                    <!-- Location Map -->
+                    <div class="sidebar-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-map"></i>
+                            الموقع على الخريطة
+                        </h3>
+                        <div class="location-map">
+                            <!-- Interactive Google Map -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3709.8934759842653!2d39.17091007599652!3d21.49638498016158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15c3d09a03a24c63%3A0x7e8ae8f4baabb7f5!2z2K3ZiiDYp9mE2LHZiNi22Kkg2KzYr9ip!5e0!3m2!1sar!2ssa!4v1703185300000!5m2!1sar!2ssa" 
+                                width="100%" 
+                                height="250" 
+                                style="border:0; border-radius: 10px;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="موقع الشركة على الخريطة">
+                            </iframe>
+                            
+                            <!-- Map Details -->
+                            <div style="background: #f8f9fa; padding: 15px; margin-top: 10px; border-radius: 8px; font-size: 0.9rem;">
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                    <i class="fas fa-map-marker-alt" style="color: var(--primary-blue);"></i>
+                                    <span style="font-weight: 600;">العنوان التفصيلي:</span>
+                                </div>
+                                <p style="margin-bottom: 10px; color: var(--dark-gray);" x-text="company.fullAddress"></p>
+                                
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                    <i class="fas fa-route" style="color: var(--primary-blue);"></i>
+                                    <span style="font-weight: 600;">الوصول:</span>
+                                </div>
+                                <p style="margin-bottom: 10px; color: var(--dark-gray);">قريب من شارع الأمير سلطان الرئيسي، سهولة الوصول من جميع أحياء جدة</p>
+                                
+                                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                    <a :href="'https://maps.google.com/maps?q=' + encodeURIComponent(company.fullAddress)" target="_blank" 
+                                       style="background: var(--primary-blue); color: white; padding: 8px 12px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; flex: 1; text-align: center;">
+                                        <i class="fas fa-directions"></i> اتجاهات
+                                    </a>
+                                    <a :href="'tel:' + company.phone" 
+                                       style="background: var(--success-green); color: white; padding: 8px 12px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; flex: 1; text-align: center;">
+                                        <i class="fas fa-phone"></i> اتصال
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="sidebar-section">
+                        <h3 class="section-title">
+                            <i class="fas fa-chart-bar"></i>
+                            إحصائيات سريعة
+                        </h3>
+                        <div style="display: grid; gap: 1rem;">
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>إجمالي المراجعات:</span>
+                                <strong x-text="company.reviewCount"></strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>متوسط وقت الاستجابة:</span>
+                                <strong x-text="company.responseTime"></strong>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>معدل الإنجاز في الوقت:</span>
+                                <strong x-text="company.onTimeRate + '%'"></strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function companyProfileApp() {
+            return {
+                company: {
+                    id: 1,
+                    name: 'شركة البراق لنقل العفش',
+                    subtitle: 'رائدة في خدمات نقل الأثاث والعفش في جدة',
+                    logo: 'public/images/furniture_moving_services_jeddah_professionals.jpg',
+                    rating: 4.8,
+                    reviewCount: 245,
+                    established: 2015,
+                    location: 'شمال جدة - حي الروضة',
+                    fullAddress: 'شارع الأمير سلطان، حي الروضة، جدة 23432',
+                    phone: '0112345678',
+                    email: 'info@alboraq-moving.com',
+                    website: 'https://alboraq-moving.com',
+                    verified: true,
+                    premium: true,
+                    fleetSize: 15,
+                    employees: 45,
+                    licenseNumber: 'MV-JED-2015-001',
+                    responseTime: '30 دقيقة',
+                    onTimeRate: 95,
+                    
+                    services: [
+                        {
+                            name: 'نقل منزلي',
+                            description: 'نقل كامل للشقق والفلل',
+                            icon: 'fas fa-home'
+                        },
+                        {
+                            name: 'نقل تجاري',
+                            description: 'نقل المكاتب والشركات',
+                            icon: 'fas fa-building'
+                        },
+                        {
+                            name: 'تغليف احترافي',
+                            description: 'تغليف آمن لجميع القطع',
+                            icon: 'fas fa-box'
+                        },
+                        {
+                            name: 'فك وتركيب',
+                            description: 'فك وتركيب الأثاث بخبرة',
+                            icon: 'fas fa-tools'
+                        },
+                        {
+                            name: 'تخزين مؤقت',
+                            description: 'مستودعات آمنة ومكيفة',
+                            icon: 'fas fa-warehouse'
+                        },
+                        {
+                            name: 'تنظيف ما بعد النقل',
+                            description: 'تنظيف شامل للمنزل',
+                            icon: 'fas fa-broom'
+                        }
+                    ],
+
+                    pricing: [
+                        {
+                            service: 'نقل شقة (غرفتين)',
+                            price: '800-1200',
+                            description: 'شامل التغليف والنقل'
+                        },
+                        {
+                            service: 'نقل فيلا صغيرة',
+                            price: '2000-3000',
+                            description: 'شامل جميع الخدمات'
+                        },
+                        {
+                            service: 'نقل مكتب',
+                            price: '1500-2500',
+                            description: 'حسب حجم المكتب'
+                        },
+                        {
+                            service: 'خدمة التغليف فقط',
+                            price: '300-500',
+                            description: 'مواد تغليف عالية الجودة'
+                        }
+                    ],
+
+                    gallery: [
+                        'public/images/furniture_moving_services_jeddah_professionals.jpg',
+                        'public/images/furniture_moving_trucks_jeddah.jpg',
+                        'public/images/furniture_packing_moving_jeddah.jpg',
+                        'public/images/furniture_protection_moving_jeddah.jpg',
+                        'public/images/business_relocation_experts_jeddah_ksa.jpg',
+                        'public/images/affordable_moving_company_jeddah_saudi_arabia.jpg'
+                    ],
+
+                    reviews: [
+                        {
+                            id: 1,
+                            author: 'أحمد محمد',
+                            rating: 5,
+                            text: 'خدمة ممتازة ومهنية عالية. تم نقل جميع الأثاث بعناية فائقة ولم يحدث أي تلف.',
+                            date: '15 ديسمبر 2024'
+                        },
+                        {
+                            id: 2,
+                            author: 'سارة علي',
+                            rating: 5,
+                            text: 'سرعة في الخدمة والتزام بالمواعيد. أنصح بهذه الشركة لأي شخص يريد نقل آمن.',
+                            date: '10 ديسمبر 2024'
+                        },
+                        {
+                            id: 3,
+                            author: 'خالد السعودي',
+                            rating: 4,
+                            text: 'جيدة بشكل عام، لكن التأخير البسيط في الوصول. عدا ذلك الخدمة ممتازة.',
+                            date: '5 ديسمبر 2024'
+                        }
+                    ],
+
+                    workingHours: [
+                        { day: 'السبت - الخميس', time: '7:00 ص - 10:00 م' },
+                        { day: 'الجمعة', time: '2:00 م - 10:00 م' }
+                    ]
+                },
+
+                requestQuote() {
+                    // Redirect to booking page with company ID
+                    window.location.href = `booking.html?company=${this.company.id}`;
+                },
+
+                addToCompare() {
+                    // Add company to comparison
+                    alert(`تم إضافة ${this.company.name} للمقارنة`);
+                }
+            }
+        }
+    </script>
+</body>
+</html> 
+                        {
+                            id: 2,
+                            author: 'سارة علي',
+                            rating: 5,
+                            text: 'سرعة في الخدمة والتزام بالمواعيد. أنصح بهذه الشركة لأي شخص يريد نقل آمن.',
+                            date: '10 ديسمبر 2024'
+                        },
+                        {
+                            id: 3,
+                            author: 'خالد السعودي',
+                            rating: 4,
+                            text: 'جيدة بشكل عام، لكن التأخير البسيط في الوصول. عدا ذلك الخدمة ممتازة.',
+                            date: '5 ديسمبر 2024'
+                        }
+                    ],
+
+                    workingHours: [
+                        { day: 'السبت - الخميس', time: '7:00 ص - 10:00 م' },
+                        { day: 'الجمعة', time: '2:00 م - 10:00 م' }
+                    ]
+                },
+
+                requestQuote() {
+                    // Redirect to booking page with company ID
+                    window.location.href = `booking.html?company=${this.company.id}`;
+                },
+
+                addToCompare() {
+                    // Add company to comparison
+                    alert(`تم إضافة ${this.company.name} للمقارنة`);
+                }
+            }
+        }
+    </script>
+</body>
+</html> 
