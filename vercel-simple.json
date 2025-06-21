@@ -1,0 +1,48 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/companies",
+      "dest": "/companies.html"
+    },
+    {
+      "src": "/compare",
+      "dest": "/compare.html"
+    },
+    {
+      "src": "/reviews",
+      "dest": "/reviews.html"
+    },
+    {
+      "src": "/contact",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "/booking",
+      "dest": "/booking.html"
+    },
+    {
+      "src": "/terms",
+      "dest": "/terms.html"
+    },
+    {
+      "src": "/privacy",
+      "dest": "/privacy.html"
+    },
+    {
+      "src": "/blog",
+      "dest": "/blog/index.html"
+    },
+    {
+      "src": "/blog/(.*)",
+      "dest": "/blog/$1"
+    }
+  ]
+} 
