@@ -1,19 +1,8 @@
 {
   "name": "movers-jeddah-platform",
   "version": "1.0.0",
-  "description": "منصة شاملة لتقييم ومقارنة شركات نقل العفش في جدة مع مراجعات موثقة ونصائح خبراء",
-  "keywords": [
-    "نقل العفش",
-    "جدة", 
-    "شركات النقل",
-    "تقييم الشركات",
-    "مراجعات العملاء",
-    "سعودية",
-    "أثاث",
-    "moving companies",
-    "jeddah",
-    "furniture moving"
-  ],
+  "description": "منصة شاملة لتقييم ومقارنة شركات نقل العفش في جدة",
+  "keywords": ["نقل العفش", "جدة", "شركات النقل"],
   "homepage": "https://movers-jeddah.com",
   "author": {
     "name": "منصة نقل العفش جدة",
@@ -34,16 +23,8 @@
     "npm": ">=8.0.0"
   },
   "scripts": {
-    "dev": "npx live-server . --port=3000 --entry-file=index.html",
-    "start": "npx live-server . --port=3000 --entry-file=index.html",
-    "build": "echo 'Static site - build complete'",
-    "test": "echo 'No tests specified' && exit 0",
-    "lint": "echo 'HTML/CSS/JS validation'",
-    "deploy": "vercel --prod",
-    "preview": "vercel",
-    "validate-html": "echo 'HTML validation needed'",
-    "optimize-images": "echo 'Image optimization needed'",
-    "seo-check": "echo 'SEO validation completed - check SEO_OPTIMIZATION_REPORT.md'"
+    "build": "echo 'Ready for deployment'",
+    "start": "echo 'Static site served'"
   },
   "devDependencies": {
     "live-server": "^1.2.2"
